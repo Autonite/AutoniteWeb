@@ -8,11 +8,17 @@ h1{
     line-height: 80px;
 }
 
+h2{
+    font-size: 45px;
+    margin-bottom: 30px;
+    margin-top: 90px;
+}
+
 p{
     font-size: 18px;
     color: #999999;
     line-height: 1.8;
-    margin-bottom: 0;
+    margin-bottom: 80px;
 }
 
 .topmargin-xs{margin-top: 15px;}
