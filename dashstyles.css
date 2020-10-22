@@ -24,7 +24,6 @@ body{
     margin: 0 auto 60px auto;
     text-align: center;
 }
-
 #sidebar-container{
     min-height: 100vh;
     /*margin-left: -18rem;
@@ -41,4 +40,10 @@ height: 60px;
 #sidebar-container .menu{
     background-color: #24282b;
     width: 18rem; /*288 px*/
+}
+#sidebar-container a{
+    color: white;
+}
+.bg-dark {
+    background-color: #24282b !important;
 }
