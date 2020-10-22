@@ -2,25 +2,6 @@ body{
     font-family: 'Titillium Web', sans-serif;
 }
 
-h1{
-    font-size: 66px;
-    font-weight: 600;
-    line-height: 80px;
-}
-
-h2{
-    font-size: 45px;
-    margin-bottom: 30px;
-    margin-top: 90px;
-}
-
-p{
-    font-size: 18px;
-    color: #999999;
-    line-height: 1.8;
-    margin-bottom: 80px;
-}
-
 .topmargin-xs{margin-top: 15px;}
 .topmargin-sm{margin-top: 30px;}
 .topmargin-lg{margin-top: 60px;}
@@ -34,10 +15,6 @@ p{
 .nav-link{color: #ffffff;}
 .nav-link:hover{ color: #dddddd;}
 
-.logo-brand{
-        width: 110px;
-         height: 65px; 
-}
 
 .navbar-toggler{font-size: 40px;}
 .navbar-toggler:focus{outline: none;}
@@ -48,8 +25,6 @@ p{
     text-align: center;
 }
 
-
-
 #sidebar-container{
     min-height: 100vh;
     /*margin-left: -18rem;
@@ -57,10 +32,13 @@ p{
 }
 
 #sidebar-container .logo{
-    padding: 0.875rem 1.25rem;
-    font-size: 1.2rem;
+min-height: 100px; 
+}
+#sidebar-container .logo img{
+height: 60px;
 }
 
 #sidebar-container .menu{
+    background-color: #24282b;
     width: 18rem; /*288 px*/
 }
