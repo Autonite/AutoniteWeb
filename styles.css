@@ -21,10 +21,6 @@ p{
     margin-bottom: 80px;
 }
 
-/* a:hover{
-    text-decoration: none;
-} */
-
 .topmargin-xs{margin-top: 15px;}
 .topmargin-sm{margin-top: 30px;}
 .topmargin-lg{margin-top: 60px;}
@@ -141,7 +137,7 @@ img{
         font-size: 40px; line-height: normal;
     }
  }
-@media (min-width: 576px) and (max-width: 767.98px) { ... }
+/* @media (min-width: 576px) and (max-width: 767.98px) { ... }
 @media (min-width: 768px) and (max-width: 991.98px) { ... }
 @media (min-width: 992px) and (max-width: 1199.98px) { ... }
-@media (min-width: 1200px) { ... }
+@media (min-width: 1200px) { } */
