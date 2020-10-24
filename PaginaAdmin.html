@@ -21,10 +21,9 @@
 
     <class id="content-wrapper" class="d-flex">
         <!-- SIDEBAR -->
-        <nav id="sidebar">
+        <nav id="sidebar" class="bg-dark">
             <div class="sidebar-header">
-                <img src="img/logo.png">
-                <strong><img src="img/logao.png"></strong>
+                <img id="sidebar-img" src="img/logo.png">
             </div>
 
             <ul class="list-unstyled components">
@@ -32,67 +31,67 @@
                 <li>
                     <a href="#sb-usuarios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="icon ion-md-contact p-1"></i>
-                        Gestión de usuarios
+                        Usuarios
                     </a>
                     <ul class="collapse list-unstyled" id="sb-usuarios">
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Registrar empleados</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Registrar empleados</a>
                         </li>
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Modificar empleados</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Modificar empleados</a>
                         </li>
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Consultar empleados</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Consultar empleados</a>
                         </li>
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Tareas</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Tareas</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#sb-compras" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="icon ion-md-pricetag p-1"></i>
-                        Gestión de compras
+                        <i class="icon ion-md-cart p-1"></i>
+                        Compras
                     </a>
                     <ul class="collapse list-unstyled" id="sb-compras">
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Realizar compras</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Realizar compras</a>
                         </li>
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Cancelar compras</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Cancelar compras</a>
                         </li>
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Historial de compras</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Historial de compras</a>
                         </li>
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Reporte de compras</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Reporte de compras</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#sb-ventas" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="icon ion-md-construct p-1"></i>
-                        Gestión de ventas
+                        <i class="icon ion-md-pricetag p-1"></i>
+                        Ventas
                     </a>
                     <ul class="collapse list-unstyled" id="sb-ventas">
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Registrar ventas</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Registrar ventas</a>
                         </li>
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Modificar ventas</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Modificar ventas</a>
                         </li>
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Historial de ventas</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Historial de ventas</a>
                         </li>
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Reporte de ventas</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Reporte de ventas</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">
                         <i class="icon ion-md-list-box p-1"></i>
-                        Gestión de inventario
+                        Inventario
                     </a>
                 </li>
                 <li>
@@ -102,42 +101,67 @@
                     </a>
                     <ul class="collapse list-unstyled" id="sb-humana">
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Administrar contratos</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Modificar contratos</a>
                         </li>
                         <li>
-                            <a href="#"><i class="icon ion-md-arrow-dropright"></i>Ausencias y permisos</a>
+                            <a href="#"><i class="icon ion-md-code"></i>Ausencias y permisos</a>
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul>>
+            <!-- <ul class="list-unstyled footer-btn">
+                <li>
+                    <a href="#">Cerrar sesión</a>
+                </li>
+            </ul> -->
+            <!-- <p class="text-center text-light">&copy; 2020 Autonite</p> -->
         </nav>
 
         <!-- PAGINA -->
         <div id="page-container" class="w-100">
-            <nav class="navbar navbar-expand-lg bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
                 <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                    <i class="icon ion-md-list"></i>
+                    <i class="icon ion-md-menu"></i>
                 </button>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item dropdown">
+                        <!-- <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search">
+                            <span class="input-group-append">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="icon ion-md-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                            <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Cuenta
+                                <i class="icon ion-md-person"></i>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="#">Perfil</a>
                                 <a class="dropdown-item" href="#">Configuración</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Cerrar sesión</a>
+                            </div>
+                        </li> -->
+                        <i class="lead mr-4 icon ion-md-search text-light"></i>
+                        <i class="lead mr-4 icon ion-md-notifications text-light"></i>
+                        <i class="lead mr-4 icon ion-md-person text-light"></i>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Perfil</a>
+                                <a class="dropdown-item" href="#">Configuración</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="#">Cerrar sesión</a>
                             </div>
                         </li>
                     </ul>
@@ -146,11 +170,10 @@
             <!-- Ruta de página (Inicio > Usuarios > Consultar usuarios) -->
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                 </ol>
             </nav>
-
     </class>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
