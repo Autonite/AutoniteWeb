@@ -150,11 +150,11 @@ a[data-toggle="collapse"] {
 .navbar{
     line-height: 1 !important;
 }
-ul ul a i {
+#sidebar ul ul a i {
     font-size: 1em !important;
 }
 
-ul ul a:hover {
+#sidebar ul ul a:hover {
     color: white !important;
 }
 
