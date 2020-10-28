@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/479c18a373.js" crossorigin="anonymous"></script>
     <link href="styles.css" rel="stylesheet">
     <title>Olvide Mi Contraseña | Autonite</title>
 </head>
@@ -53,6 +54,7 @@
 
             <div class="col-lg-6 col-md-6 form-container">
                 <div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box">
+
                     <div class="reset-form d-block">
                         <form class="reset-password-form">
                             <h4 class="mb-3">Restablece tu contraseña</h4>
@@ -62,37 +64,25 @@
                                 <input type="email" placeholder="Correo electrónico" required>
                             </div>
                             <div class="mb-3">
-                                <button class="btn_restablecer" type="submit">Restablecer</button>
+                                <button class="btn" id="btn-open-popup" type="submit">Restablecer</button>
                             </div>
                         </form>
                     </div>
-                    <!--  <div class="reset-confirmation d-none">
-                <div class="mb-4">
-                    <h4 class="mb-3">restablecimiento enviado.</h4>
-                    <h6 class="text-white">Por favor revise su bandeja de entrada.</h6>
-                </div>
-                <div>
-                    <a href="Login.html">
-                        <button type="submit" class="btn">Inicia sesión</button>
-                    </a>
-                </div>
-            </div> -->
 
                     <div class="overLay" id="overLay">
                         <div class="popup" id="popup">
                             <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">
-                                <li class="fas fa-times"></li>
+                                <li class="fa fa-times"></li>
                             </a>
-                            
-                            <h4>restablecimiento enviado.</h4>
-                            <h6>Por favor revise su bandeja de entrada.</h6>
-                            
-                            <div class="contenedor-btn">
-                                <a href="Login.html">
-                                    <button type="submit" class="btn">Inicia sesión</button>
-                                </a>
-                            </div>
+                            <h3>Envio exitoso.</h3>
+                            <h4>Por favor revise su bandeja de entrada.</h4>
+                            <form action="">
+                                <div class="contenedor-btn">
+                                    <a type="submit" href="Login.html">Inicia sesión</button>                                    
+                                </div>
+                            </form>
                         </div>
+
                     </div>
                 </div>
             </div>

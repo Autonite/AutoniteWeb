@@ -1,4 +1,4 @@
-var btnAbrirPopup = document.getElementById('btn_restablecer'),
+var btnAbrirPopup = document.getElementById('btn-open-popup'),
     overLay= document.getElementById('overLay'),
     popup= document.getElementById('popup'),
     btnCerrarPopup= document.getElementById('btn-cerrar-popup');
