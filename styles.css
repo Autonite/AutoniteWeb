@@ -295,12 +295,34 @@ img{
     transition: 0.5s;
     border-color: #1293d4;
     margin-top: 10px;
+    border-radius: 3px;
 }
 
 .form-box button[type="submit"]:hover{
     background: none;
     border-color: #1293d4;
 }
+
+.contenedor-btn a{
+    color: #ffffff;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background-color: #1293d4;
+    font-weight: bold;
+    transition: 0.5s;
+    margin-top: 10px;
+    border-radius: 3px;
+    padding-top: 10px;
+}
+
+.contenedor-btn a:hover{
+    background: none;
+    text-decoration: none;
+    color: #000;
+    border: #000;
+}
+
 
 .overLay{
     background: rgba(0,0,0,.3);
@@ -321,7 +343,7 @@ img{
 
 .popup{
     background: #f8f8f8;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+    box-shadow: 0px 0px 5px 0px rgba(95, 34, 34, 0.3);
     border-radius: 3px;
     padding: 20px;
     text-align: center;
@@ -341,7 +363,7 @@ img{
     transition: .3 ease all;
 }
 
-.popup form .contenedor-btn{
+.popup form .btn{
     opacity: 0;
 }
 
@@ -349,7 +371,8 @@ img{
     color: #24282b;
 }
 
-.popup h4{
+
+.popup h3{
     font-size: 36px;
     font-weight: 600;
     margin-top: 10px;
@@ -357,34 +380,18 @@ img{
     opacity: 0;
 }
 
-.popup h6{
+.popup h4{
     font-size: 20px;
     font-weight: 100;
     margin-top: 5px;
     margin-bottom: 20px;
+    color: #000000;
     opacity: 0;
 }
 
-.popup .contenedor-btn button{
-    border: 2px solid  #077FBB;
-    background: none;
-    padding: 15px 20px;
-    text-align: center;
-    color: #ffffff;
-    border-radius: 30px;
-    transition: 0.25s;
-    background-color: #077FBB;  
-    font-size: 15px;
-    display: block;
-    margin: 10px;
-    margin-left: 100px;
-    width: 150px;
-    cursor: pointer;
-}
 
-.popup .contenedor-btn a:hover{
-    background: none;
-    color: black;
+.popup form .btn:hover{
+    color: #000;
 }
 
 .popup.active{
@@ -392,15 +399,17 @@ img{
     transform: scale(1);
 }
 
-.popup.active h4{
+
+.popup.active h3{
     animation: entradaTitulo .8s ease .5s forwards;
 }
-.popup.active h6{
+.popup.active h4{
     animation: entradaSubTitulo .8s ease .5s forwards;
 }
-.popup.active .contenedor-btn{
+.popup.active .btn{
     animation: entradaBotones 1s ease 1s forwards;
 }
+
 
 @keyframes entradaTitulo{
     from{
@@ -430,4 +439,4 @@ img{
     to{
         opacity: 1;
     }
-}
+} 
