@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="icon" href="img/logo.png" />
-    <title>Inicio | Autonite</title>
+    <title>Inventario | Autonite</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -30,7 +30,7 @@
       rel="stylesheet"
     />
 
-    <link href="adminstyles.css" rel="stylesheet" />
+    <link href="shirlycss.css" rel="stylesheet" />
 
     <!-- Bootstrap JavaScript -->
     <script
@@ -251,64 +251,74 @@
       <div id="content">
         <!-- CONTENIDO PAGINA -->
         <!-- AQUÍ VA EL RESTO DE LA PAGINA, BORRAR LO DE ABAJO -->
-        <h2>Collapsible Sidebar Using Bootstrap 4</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+             <div class="row">
+            <div class="col-md-12">
+                <div class="well well-sm">
+                    <form class="form-horizontal" method="post">
+                        <fieldset>
+                            <legend class="text-center header"><strong>Productos</strong> </legend>
+    
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <input id="fname" name="name" type="text" placeholder="Nombre producto" class="form-control">
+                                </div>
+                            </div>
+  
+                           
+                            <div class="form-group">
+                              <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                              <div class="col-md-8">
+                                  <input id="fname" name="name" type="number" placeholder="ID " class="form-control">
+                              </div>
+                          </div>
+  
+                          
+                        
+  
+                        <div class="form-group">
+                          <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                          <div class="col-md-8">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
+                            <select class="form-control">
+                              <option>Clasificación</option>
+                              <option>Producto 1</option>
+                              <option>Producto 2</option>
+                              <option>Producto 3</option>
+                              <option>Producto 4</option>
+                              <option>Producto 5</option>
+                            </select>
+                              </div>
+                          </div>
+                      </div>
+  
+  
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <input id="lname" name="name" type="number" placeholder="Cantidad" class="form-control">
+                                </div>
+                            </div>
+                            
 
-        <div class="line"></div>
-
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <div class="line"></div>
-
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <div class="line"></div>
-
-        <h3>Lorem Ipsum Dolor</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+                            <div class="form-group">
+                              <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                              <div class="col-md-8">
+                                  <input id="lname" name="name" type="number" placeholder="Valor unitario" class="form-control">
+                              </div>
+                          </div>
+  
+                          
+    
+                          <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <a href="../html/consultaInventario.html" class="btn btn-primary btn-lg" type="submit">Enviar</a>
+                              
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         <!-- Fin CONTENIDO PAGINA -->
       </div>
     </div>
