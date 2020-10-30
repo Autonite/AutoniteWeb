@@ -1,0 +1,24 @@
+body{
+    background-image: url(../img/composicion-moderna-mecanico-automoviles_23-2147881169.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 5px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
+
+.container{
+    
+    background:#ebedf0;
+}
+
+

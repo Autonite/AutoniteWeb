@@ -1,0 +1,22 @@
+body{
+    background-image: url(../img/GTH-F-091_-_Encuesta_Grado_de_Satisfaccion\ consulta\ 2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 5px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
+
+.container{
+
+    background:#f0f2f5;
+}
