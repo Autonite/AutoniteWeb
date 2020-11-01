@@ -35,18 +35,15 @@ body {
 
 #navbar-logo {
   width: 208px;
+  margin-left: 20%;
 }
 
 #navbar-logo img {
   display: block;
-  max-width: 72px;
+  max-width: 88px;
 }
 #navbar ul a {
   color: rgba(255, 255, 255, 0.55) !important;
-}
-
-#navbar .dropdown-item {
-  color: gray !important;
 }
 
 #navbar a:hover,
@@ -59,6 +56,21 @@ body {
   min-width: 40px;
   background: transparent;
   border: none;
+}
+
+/* ----------------- */
+/* DROPDOWNS NAV-BAR */
+/* ----------------- */
+
+#navbar .dropdown-item {
+  color: gray !important;
+}
+
+/* ----------------- */
+/* FORMATO DE MODALS */
+/* ----------------- */
+.btn-dark {
+  background: #343a40;
 }
 
 /* ----------------- */
@@ -82,7 +94,7 @@ body {
 }
 
 #sidebar.hidden {
-  margin-left: -224px;
+  margin-left: -230px;
   transform: rotateY(100deg);
 }
 
@@ -90,6 +102,11 @@ body {
   padding-top: 15px;
   margin: auto;
   width: 80%;
+}
+
+#sidebar .form-control {
+  font-size: 0.9rem;
+  border-radius: 0.1rem;
 }
 
 #sidebar hr {
@@ -101,58 +118,23 @@ body {
   text-decoration: none;
   transition: all 0.3s;
 }
+#sidebar i {
+  transition: all 0.3s;
+}
 
 #sidebar ul li a {
   color: rgba(255, 255, 255, 0.55);
-  padding: 10px;
+  padding: 15px;
   display: block;
 }
-
+#sidebar ul ul a {
+  padding: 10px;
+}
 #sidebar ul li a i {
   color: rgba(255, 255, 255, 0.15);
   margin-right: 10px;
 }
 
-#sidebar ul li a[aria-expanded="true"] {
-  color: white;
-}
-#sidebar ul li a[aria-expanded="true"] i {
-  color: #007bff;
-}
-
-#sidebar ul ul a {
-  font-size: 0.9em !important;
-  padding-left: 30px !important;
-  background: #1d2124;
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-#sidebar ul ul i {
-  color: rgba(255, 255, 255, 0.4) !important;
-}
-
-#sidebar a:hover {
-  color: white !important;
-  background: #0275d8;
-}
-
-#sidebar i:hover {
-  color: white !important;
-}
-
-/* ---------------- */
-/* CONTENIDO PAGINA */
-/* ---------------- */
-#content {
-  margin-top: 76px;
-  margin-left: 224px;
-  width: 100%;
-  padding: 20px;
-  min-height: 100vh;
-  transition: all 0.3s;
-}
-#sidebar.hidden > #content {
-  margin-left: 0px;
-}
 #sidebar a[data-toggle="collapse"] {
   position: relative;
 }
@@ -163,4 +145,60 @@ body {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
+}
+
+/* DESPLEGADOS */
+#sidebar ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #1d2124;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+#sidebar ul ul i {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#sidebar ul li a[aria-expanded="true"] {
+  color: #0275d8;
+  font-weight: bold;
+}
+#sidebar ul li a[aria-expanded="true"] i {
+  color: #0275d8;
+}
+
+/* SELECCION */
+
+#sidebar a:hover {
+  color: white !important;
+  background: #0275d8;
+}
+#sidebar a:hover i {
+  color: white !important;
+}
+#sidebar a.active {
+  color: white !important;
+  background: #0275d8;
+}
+#sidebar a.active i {
+  color: white !important;
+}
+
+/* ---------------- */
+/* MIGA DE PANNSUSU */
+/* ---------------- */
+
+/* ---------------- */
+/* CONTENIDO PAGINA */
+/* ---------------- */
+#content {
+  margin-top: 76px;
+  margin-left: 230px;
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
+}
+
+#content.hidden {
+  margin-left: 0;
 }

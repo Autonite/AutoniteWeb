@@ -49,6 +49,7 @@
       $(document).ready(function () {
         $("#sidebarCollapse").on("click", function () {
           $("#sidebar").toggleClass("hidden");
+          $("#content").toggleClass("hidden");
         });
       });
     </script>
@@ -80,12 +81,12 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="#"
-                ><i class="icon ion-md-search px-1"></i
+                ><i class="icon ion-md-notifications px-1"></i
               ></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"
-                ><i class="icon ion-md-notifications px-1"></i
+                ><i class="icon ion-md-calendar px-1"></i
               ></a>
             </li>
 
@@ -110,11 +111,19 @@
                   >Juan Pablo Machado
                 </h6>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
+                <a
+                  class="dropdown-item"
+                  href="#modal-changepwd"
+                  data-toggle="modal"
+                >
                   <small><i class="icon ion-md-key text-muted pr-1"></i></small
                   >Cambiar contraseña</a
                 >
-                <a class="dropdown-item" href="#">
+                <a
+                  class="dropdown-item"
+                  href="#modal-logout"
+                  data-toggle="modal"
+                >
                   <small><i class="icon ion-md-exit text-muted pr-1"></i></small
                   >Cerrar sesión</a
                 >
@@ -124,7 +133,78 @@
         </div>
       </nav>
       <!-- Fin NAVBAR -->
-
+      <div
+        class="modal fade"
+        id="modal-changepwd"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Cambiar contraseña
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label"
+                    >Contraseña actual</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Ingresa tu contraseña actual..."
+                    id="input-oldPsw"
+                    required
+                  />
+                </div>
+                <hr />
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label"
+                    >Nueva contraseña</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Ingresa tu nueva contraseña..."
+                    id="input-newPsw"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label"
+                    >Confirmar contraseña</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Confirma tu nueva contraseña..."
+                    id="input-newPsw2"
+                    required
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-dismiss="modal">
+                Cancelar
+              </button>
+              <button type="button" class="btn btn-primary">Confirmar</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Inicio SIDEBAR -->
       <div class="sidebar-div">
         <nav id="sidebar" class="bg-moredark">
@@ -138,34 +218,37 @@
           </div>
           <hr />
           <ul class="list-unstyled">
-            <li class="hidden">
+            <li>
+              <a href="#"
+                ><i class="icon ion-md-speedometer p-1"></i>Panel de control</a
+              >
+            </li>
+            <hr />
+            <li>
               <a
                 href="#sb-compras"
                 data-toggle="collapse"
                 aria-expanded="false"
                 class="dropdown-toggle"
-              >
-                <i class="icon ion-md-cart p-1"></i>Compras</a
+                ><i class="icon ion-md-cart p-1"></i>Compras</a
               >
               <ul class="collapse list-unstyled" id="sb-compras">
                 <li>
                   <a href="#"
-                    ><i class="icon ion-md-code"></i>Realizar compras</a
+                    ><i class="icon ion-md-radio-button-off"></i>Gestionar
+                    compras</a
                   >
                 </li>
                 <li>
                   <a href="#"
-                    ><i class="icon ion-md-code"></i>Cancelar compras</a
+                    ><i class="icon ion-md-radio-button-off"></i>Gestionar
+                    proveedores</a
                   >
                 </li>
                 <li>
                   <a href="#"
-                    ><i class="icon ion-md-code"></i>Historial de compras</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="icon ion-md-code"></i>Reporte de compras</a
+                    ><i class="icon ion-md-radio-button-off"></i>Historial de
+                    compras</a
                   >
                 </li>
               </ul>
@@ -176,38 +259,57 @@
                 data-toggle="collapse"
                 aria-expanded="false"
                 class="dropdown-toggle"
-              >
-                <i class="icon ion-md-pricetag p-1"></i>
-                Ventas
+                ><i class="icon ion-md-pricetag p-1"></i>Ventas
               </a>
               <ul class="collapse list-unstyled" id="sb-ventas">
                 <li>
                   <a href="#"
-                    ><i class="icon ion-md-code"></i>Registrar ventas</a
+                    ><i class="icon ion-md-radio-button-off"></i>Registrar
+                    ventas</a
                   >
                 </li>
                 <li>
                   <a href="#"
-                    ><i class="icon ion-md-code"></i>Modificar ventas</a
+                    ><i class="icon ion-md-radio-button-off"></i>Modificar
+                    ventas</a
                   >
                 </li>
                 <li>
                   <a href="#"
-                    ><i class="icon ion-md-code"></i>Historial de ventas</a
+                    ><i class="icon ion-md-radio-button-off"></i>Historial de
+                    ventas</a
                   >
                 </li>
                 <li>
                   <a href="#"
-                    ><i class="icon ion-md-code"></i>Reporte de ventas</a
+                    ><i class="icon ion-md-radio-button-off"></i>Reporte de
+                    ventas</a
                   >
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#">
-                <i class="icon ion-md-list-box p-1"></i>
-                Inventario
+              <a
+                href="#sb-inventario"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                ><i class="icon ion-md-list-box p-1"></i>Inventario
               </a>
+              <ul class="collapse list-unstyled" id="sb-inventario">
+                <li>
+                  <a href="#"
+                    ><i class="icon ion-md-radio-button-off"></i>Consultar
+                    inventario</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="icon ion-md-radio-button-off"></i>Gestionar
+                    productos</a
+                  >
+                </li>
+              </ul>
             </li>
             <li>
               <a
@@ -215,43 +317,40 @@
                 data-toggle="collapse"
                 aria-expanded="false"
                 class="dropdown-toggle"
-              >
-                <i class="icon ion-md-people p-1"></i>
-                Gestión humana
+                ><i class="icon ion-md-people p-1"></i>Gestión humana
               </a>
               <ul class="collapse list-unstyled" id="sb-humana">
                 <li>
                   <a href="#"
-                    ><i class="icon ion-md-code"></i>Modificar contratos</a
+                    ><i class="icon ion-md-radio-button-off"></i>Gestionar
+                    usuarios</a
                   >
                 </li>
                 <li>
                   <a href="#"
-                    ><i class="icon ion-md-code"></i>Ausencias y permisos</a
+                    ><i class="icon ion-md-radio-button-off"></i>Modificar
+                    contratos</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="icon ion-md-radio-button-off"></i>Ausencias y
+                    permisos</a
                   >
                 </li>
               </ul>
             </li>
             <hr />
           </ul>
-          <!-- Experimental -->
-          <ul class="list-unstyled CTAs">
-            <li>
-              <a href="#" class="download">test1</a>
-            </li>
-            <li>
-              <a href="#" class="article">test 2</a>
-            </li>
-          </ul>
-          <!-- Fin Experimental -->
         </nav>
       </div>
       <!-- Fin SIDEBAR  -->
+
       <!-- Inicio CONTENIDO PAGINA -->
       <div id="content">
         <!-- CONTENIDO PAGINA -->
         <!-- AQUÍ VA EL RESTO DE LA PAGINA, BORRAR LO DE ABAJO -->
-        <h2>Collapsible Sidebar Using Bootstrap 4</h2>
+        <h2>Lorem Ipsum Dolor</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -309,6 +408,43 @@
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
+        <div
+          class="modal fade"
+          id="modal-changepwd"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body"></div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Fin CONTENIDO PAGINA -->
       </div>
     </div>
