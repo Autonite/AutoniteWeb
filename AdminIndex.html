@@ -79,124 +79,109 @@
 
         <div class="collapse navbar-collapse lead" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                ><i class="icon ion-md-notifications px-1"></i
-              ></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="Calendario.html"
                 ><i class="icon ion-md-calendar px-1"></i
               ></a>
             </li>
-
+            <!-- DROPDOWN CUENTA -->
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
-                id="navbarDropdown"
-                role="button"
                 data-toggle="dropdown"
-                aria-haspopup="true"
                 aria-expanded="false"
                 ><i class="icon ion-md-person px-1"></i
               ></a>
               <div
-                class="dropdown-menu dropdown-menu-right dropdown-menu-lg-right"
+                class="dropdown-menu dropdown-menu-right dropdown-menu-lg-right extended account"
               >
-                <h6 class="dropdown-header">
-                  <i
-                    class="icon ion-md-information-circle-outline text-muted pr-1"
-                  ></i
-                  >Juan Pablo Machado
-                </h6>
-                <div class="dropdown-divider"></div>
+                <h6 class="bg-primary text-white">Administrador</h6>
+                <div class="user-info">
+                  <span class="photo"><i class="icon ion-md-contact"></i></span>
+                  <span class="name">Juan Pablo Machado</span>
+                  <span class="document">1005716784</span>
+                </div>
+                <div class="dropdown-divider mb-2"></div>
                 <a
                   class="dropdown-item"
                   href="#modal-changepwd"
                   data-toggle="modal"
                 >
-                  <small><i class="icon ion-md-key text-muted pr-1"></i></small
-                  >Cambiar contraseña</a
+                  <i class="icon ion-md-key text-muted mr-2"></i>Cambiar
+                  contraseña</a
                 >
-                <a
-                  class="dropdown-item"
-                  href="#modal-logout"
-                  data-toggle="modal"
-                >
-                  <small><i class="icon ion-md-exit text-muted pr-1"></i></small
-                  >Cerrar sesión</a
+                <a href="PaginaPrincipal.html" class="dropdown-item mb-2 text-danger">
+                  <i class="icon ion-md-exit text-muted mr-2"></i>Cerrar
+                  sesión</a
                 >
               </div>
             </li>
+            <!-- Fin DROPDOWNS -->
           </ul>
         </div>
       </nav>
       <!-- Fin NAVBAR -->
+      <!-- Inicio MODALS -->
       <div
-        class="modal fade"
+        class="modal fade staticBackdrop"
         id="modal-changepwd"
+        data-backdrop="static"
+        data-keyboard="false"
         tabindex="-1"
-        aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
-              <h5 class="modal-title" id="exampleModalLabel">
-                Cambiar contraseña
-              </h5>
+            <div class="modal-header bg-danger text-white">
+              <h5 class="modal-title font-weight-bold">Cambiar contraseña</h5>
               <button
                 type="button"
                 class="close"
                 data-dismiss="modal"
                 aria-label="Close"
               >
-                <span aria-hidden="true">&times;</span>
+                <span class="" aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
               <form>
                 <div class="form-group">
                   <label for="recipient-name" class="col-form-label"
-                    >Contraseña actual</label
+                    >Contraseña actual:</label
                   >
                   <input
                     type="password"
-                    class="form-control"
-                    placeholder="Ingresa tu contraseña actual..."
+                    class="form-control bg-light"
+                    placeholder="Ingresar contraseña actual..."
                     id="input-oldPsw"
                     required
                   />
-                </div>
-                <hr />
-                <div class="form-group">
-                  <label for="recipient-name" class="col-form-label"
-                    >Nueva contraseña</label
+                  <hr class="mb-1" />
+                  <label
+                    for="recipient-name"
+                    class="col-form-label font-weight-normal"
+                    >Nueva contraseña:</label
                   >
                   <input
                     type="password"
-                    class="form-control"
-                    placeholder="Ingresa tu nueva contraseña..."
+                    class="form-control bg-light"
+                    placeholder="Ingresar nueva contraseña..."
                     id="input-newPsw"
                     required
                   />
-                </div>
-                <div class="form-group">
-                  <label for="recipient-name" class="col-form-label"
-                    >Confirmar contraseña</label
-                  >
                   <input
                     type="password"
-                    class="form-control"
-                    placeholder="Confirma tu nueva contraseña..."
+                    class="form-control mt-2 bg-light"
+                    placeholder="Confirmar nueva contraseña..."
                     id="input-newPsw2"
                     required
                   />
                 </div>
               </form>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer justify-content-center bg-light">
               <button type="button" class="btn btn-dark" data-dismiss="modal">
                 Cancelar
               </button>
@@ -205,6 +190,7 @@
           </div>
         </div>
       </div>
+      <!-- Fin MODALS -->
       <!-- Inicio SIDEBAR -->
       <div class="sidebar-div">
         <nav id="sidebar" class="bg-moredark">
@@ -234,19 +220,19 @@
               >
               <ul class="collapse list-unstyled" id="sb-compras">
                 <li>
-                  <a href="#"
+                  <a href="GestionarCompras.html"
                     ><i class="icon ion-md-radio-button-off"></i>Gestionar
                     compras</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="GestionarProveedores.html"
                     ><i class="icon ion-md-radio-button-off"></i>Gestionar
                     proveedores</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="HistorialCompras.html"
                     ><i class="icon ion-md-radio-button-off"></i>Historial de
                     compras</a
                   >
@@ -263,26 +249,20 @@
               </a>
               <ul class="collapse list-unstyled" id="sb-ventas">
                 <li>
-                  <a href="#"
-                    ><i class="icon ion-md-radio-button-off"></i>Registrar
+                  <a href="GestionarVentas.html"
+                    ><i class="icon ion-md-radio-button-off"></i>Gestionar
                     ventas</a
                   >
                 </li>
                 <li>
-                  <a href="#"
-                    ><i class="icon ion-md-radio-button-off"></i>Modificar
-                    ventas</a
+                  <a href="RevisarTareas.html"
+                    ><i class="icon ion-md-radio-button-off"></i>Revisar
+                    tareas</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="HistorialVentas.html"
                     ><i class="icon ion-md-radio-button-off"></i>Historial de
-                    ventas</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="icon ion-md-radio-button-off"></i>Reporte de
                     ventas</a
                   >
                 </li>
@@ -298,13 +278,13 @@
               </a>
               <ul class="collapse list-unstyled" id="sb-inventario">
                 <li>
-                  <a href="#"
+                  <a href="ConsultarInventario.html"
                     ><i class="icon ion-md-radio-button-off"></i>Consultar
                     inventario</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="GestionarProductos.html"
                     ><i class="icon ion-md-radio-button-off"></i>Gestionar
                     productos</a
                   >
@@ -321,19 +301,19 @@
               </a>
               <ul class="collapse list-unstyled" id="sb-humana">
                 <li>
-                  <a href="#"
+                  <a href="GestionarUsuarios.html"
                     ><i class="icon ion-md-radio-button-off"></i>Gestionar
                     usuarios</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="ModificarContratos.html"
                     ><i class="icon ion-md-radio-button-off"></i>Modificar
                     contratos</a
                   >
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="AusenciasPermisos.html"
                     ><i class="icon ion-md-radio-button-off"></i>Ausencias y
                     permisos</a
                   >
@@ -345,108 +325,26 @@
         </nav>
       </div>
       <!-- Fin SIDEBAR  -->
-
-      <!-- Inicio CONTENIDO PAGINA -->
+      <!-- Inicio CONTENIDO -->
+      <!-- Inicio BREADCRUMB -->
       <div id="content">
-        <!-- CONTENIDO PAGINA -->
-        <!-- AQUÍ VA EL RESTO DE LA PAGINA, BORRAR LO DE ABAJO -->
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Panel de control</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Gestionar compras
+            </li>
+          </ol>
+        </nav>
+        <!-- Fin BREADCRUMB -->
+        <div id="page">
+          <!-- Inicio CONTENIDO PAGINA -->
+          <!-- AQUÍ VA EL RESTO DE LA PAGINA, BORRAR LO DE ABAJO -->
 
-        <div class="line"></div>
-
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <div class="line"></div>
-
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <div class="line"></div>
-
-        <h3>Lorem Ipsum Dolor</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <div
-          class="modal fade"
-          id="modal-changepwd"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body"></div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Save changes
-                </button>
-              </div>
-            </div>
-          </div>
+          <!-- Fin CONTENIDO PAGINA -->
         </div>
-        <!-- Fin CONTENIDO PAGINA -->
       </div>
+      <!-- Fin CONTENIDO -->
     </div>
   </body>
 </html>
