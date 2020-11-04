@@ -31,28 +31,6 @@
     />
 
     <link href="adminstyles.css" rel="stylesheet" />
-
-    <!-- Bootstrap JavaScript -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Boton de ocultar sidebar -->
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $("#sidebarCollapse").on("click", function () {
-          $("#sidebar").toggleClass("hidden");
-          $("#content").toggleClass("hidden");
-        });
-      });
-    </script>
   </head>
 
   <body>
@@ -94,19 +72,25 @@
               ></a>
               <div
                 class="dropdown-menu dropdown-menu-right dropdown-menu-lg-right extended account"
-              ><h6 class="bg-primary text-white">Administrador</h6>
+              >
+                <h6 class="bg-primary text-white">Administrador</h6>
                 <div class="user-info">
-                  <span class="photo"><i class="icon ion-md-contact"></i></span><span class="name">Juan Pablo Machado</span><span class="document">1005716784</span>
+                  <span class="photo"><i class="icon ion-md-contact"></i></span
+                  ><span class="name">Juan Pablo Machado</span
+                  ><span class="document">1005716784</span>
                 </div>
                 <div class="dropdown-divider mb-2"></div>
                 <a
                   class="dropdown-item"
                   href="#modal-changepwd"
                   data-toggle="modal"
-                ><i class="icon ion-md-key text-muted mr-2"></i>Cambiar
+                  ><i class="icon ion-md-key text-muted mr-2"></i>Cambiar
                   contraseña</a
                 >
-                <a href="PaginaPrincipal.html" class="dropdown-item mb-2 text-danger"><i class="icon ion-md-exit text-muted mr-2"></i>Cerrar
+                <a
+                  href="PaginaPrincipal.html"
+                  class="dropdown-item mb-2 text-danger"
+                  ><i class="icon ion-md-exit text-muted mr-2"></i>Cerrar
                   sesión</a
                 >
               </div>
@@ -126,7 +110,8 @@
       >
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
-            <div class="modal-header bg-danger text-white"><h5 class="modal-title font-weight-bold">Cambiar contraseña</h5>
+            <div class="modal-header bg-danger text-white">
+              <h5 class="modal-title font-weight-bold">Cambiar contraseña</h5>
               <button
                 type="button"
                 class="close"
@@ -138,7 +123,8 @@
             </div>
             <div class="modal-body">
               <form>
-                <div class="form-group"><label for="recipient-name" class="col-form-label"
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label"
                     >Contraseña actual:</label
                   >
                   <input
@@ -148,7 +134,8 @@
                     id="input-oldPsw"
                     required
                   />
-                  <hr class="mb-1" /><label
+                  <hr class="mb-1" />
+                  <label
                     for="recipient-name"
                     class="col-form-label font-weight-normal"
                     >Nueva contraseña:</label
@@ -170,8 +157,10 @@
                 </div>
               </form>
             </div>
-            <div class="modal-footer justify-content-center bg-light"><button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar
-              </button><button type="button" class="btn btn-primary">Confirmar</button>
+            <div class="modal-footer justify-content-center bg-light">
+              <button type="button" class="btn btn-dark" data-dismiss="modal">
+                Cancelar</button
+              ><button type="button" class="btn btn-primary">Confirmar</button>
             </div>
           </div>
         </div>
@@ -189,109 +178,144 @@
             />
           </div>
           <hr />
-          <ul class="list-unstyled">
-            <li><a href="#"
-                ><i class="icon ion-md-speedometer p-1"></i>Panel de control</a
-              >
-            </li>
-            <hr />
-            <li><a
-                href="#sb-compras"
-                data-toggle="collapse"
-                aria-expanded="false"
-                class="dropdown-toggle"
-                ><i class="icon ion-md-cart p-1"></i>Compras</a
-              >
-              <ul class="collapse list-unstyled" id="sb-compras">
-                <li><a href="GestionarCompras.html"
-                    ><i class="icon ion-md-radio-button-off"></i>Gestionar
-                    compras</a
-                  >
-                </li>
-                <li><a href="GestionarProveedores.html"
-                    ><i class="icon ion-md-radio-button-off"></i>Gestionar
-                    proveedores</a
-                  >
-                </li>
-                <li><a href="HistorialCompras.html"
-                    ><i class="icon ion-md-radio-button-off"></i>Historial de
-                    compras</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li><a
-                href="#sb-ventas"
-                data-toggle="collapse"
-                aria-expanded="false"
-                class="dropdown-toggle"
-                ><i class="icon ion-md-pricetag p-1"></i>Ventas
-              </a>
-              <ul class="collapse list-unstyled" id="sb-ventas">
-                <li><a href="GestionarVentas.html"
-                    ><i class="icon ion-md-radio-button-off"></i>Gestionar
-                    ventas</a
-                  >
-                </li>
-                <li><a href="RevisarTareas.html"
-                    ><i class="icon ion-md-radio-button-off"></i>Revisar
-                    tareas</a
-                  >
-                </li>
-                <li><a href="HistorialVentas.html"
-                    ><i class="icon ion-md-radio-button-off"></i>Historial de
-                    ventas</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li><a
-                href="#sb-inventario"
-                data-toggle="collapse"
-                aria-expanded="false"
-                class="dropdown-toggle"
-                ><i class="icon ion-md-list-box p-1"></i>Inventario
-              </a>
-              <ul class="collapse list-unstyled" id="sb-inventario">
-                <li><a href="ConsultarInventario.html"
-                    ><i class="icon ion-md-radio-button-off"></i>Consultar
-                    inventario</a
-                  >
-                </li>
-                <li><a href="GestionarProductos.html"
-                    ><i class="icon ion-md-radio-button-off"></i>Gestionar
-                    productos</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li><a
-                href="#sb-humana"
-                data-toggle="collapse"
-                aria-expanded="false"
-                class="dropdown-toggle"
-                ><i class="icon ion-md-people p-1"></i>Gestión humana
-              </a>
-              <ul class="collapse list-unstyled" id="sb-humana">
-                <li><a href="GestionarUsuarios.html"
-                    ><i class="icon ion-md-radio-button-off"></i>Gestionar
-                    usuarios</a
-                  >
-                </li>
-                <li><a href="ModificarContratos.html"
-                    ><i class="icon ion-md-radio-button-off"></i>Modificar
-                    contratos</a
-                  >
-                </li>
-                <li><a href="AusenciasPermisos.html"
-                    ><i class="icon ion-md-radio-button-off"></i>Ausencias y
-                    permisos</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <hr />
-          </ul>
+          <div id="accordion">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#PanelControl.html" id="aaaa"
+                  ><i class="icon ion-md-speedometer p-1"></i>Panel de
+                  control</a
+                >
+              </li>
+              <hr />
+              <li>
+                <a
+                  href="#sb-compras"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  class="dropdown-toggle collapsed"
+                  ><i class="icon ion-md-cart p-1"></i>Compras</a
+                >
+                <ul
+                  class="collapse list-unstyled"
+                  data-parent="#accordion"
+                  id="sb-compras"
+                >
+                  <li>
+                    <a href="GestionarCompras.html"
+                      ><i class="icon ion-md-radio-button-off"></i>Gestionar
+                      compras</a
+                    >
+                  </li>
+                  <li>
+                    <a href="GestionarProveedores.html"
+                      ><i class="icon ion-md-radio-button-off"></i>Gestionar
+                      proveedores</a
+                    >
+                  </li>
+                  <li>
+                    <a href="HistorialCompras.html"
+                      ><i class="icon ion-md-radio-button-off"></i>Historial de
+                      compras</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="#sb-ventas"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  class="dropdown-toggle collapsed"
+                  ><i class="icon ion-md-pricetag p-1"></i>Ventas
+                </a>
+                <ul
+                  class="collapse list-unstyled"
+                  data-parent="#accordion"
+                  id="sb-ventas"
+                >
+                  <li>
+                    <a href="GestionarVentas.html"
+                      ><i class="icon ion-md-radio-button-off"></i>Gestionar
+                      ventas</a
+                    >
+                  </li>
+                  <li>
+                    <a href="RevisarTareas.html"
+                      ><i class="icon ion-md-radio-button-off"></i>Revisar
+                      tareas</a
+                    >
+                  </li>
+                  <li>
+                    <a href="HistorialVentas.html"
+                      ><i class="icon ion-md-radio-button-off"></i>Historial de
+                      ventas</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="#sb-inventario"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  class="dropdown-toggle collapsed"
+                  ><i class="icon ion-md-list-box p-1"></i>Inventario
+                </a>
+                <ul
+                  class="collapse list-unstyled drop-item"
+                  data-parent="#accordion"
+                  id="sb-inventario"
+                >
+                  <li>
+                    <a href="ConsultarInventario.html"
+                      ><i class="icon ion-md-radio-button-off"></i>Consultar
+                      inventario</a
+                    >
+                  </li>
+                  <li>
+                    <a href="GestionarProductos.html"
+                      ><i class="icon ion-md-radio-button-off"></i>Gestionar
+                      productos</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="#sb-humana"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  class="dropdown-toggle collapsed"
+                  ><i class="icon ion-md-people p-1"></i>Gestión humana
+                </a>
+                <ul
+                  class="collapse list-unstyled"
+                  data-parent="#accordion"
+                  id="sb-humana"
+                >
+                  <li>
+                    <a href="GestionarUsuarios.html"
+                      ><i class="icon ion-md-radio-button-off"></i>Gestionar
+                      usuarios</a
+                    >
+                  </li>
+                  <li>
+                    <a href="ModificarContratos.html"
+                      ><i class="icon ion-md-radio-button-off"></i>Modificar
+                      contratos</a
+                    >
+                  </li>
+                  <li>
+                    <a href="AusenciasPermisos.html"
+                      ><i class="icon ion-md-radio-button-off"></i>Ausencias y
+                      permisos</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <hr />
+            </ul>
+          </div>
         </nav>
       </div>
       <!-- Fin SIDEBAR  -->
@@ -299,8 +323,10 @@
       <!-- Inicio BREADCRUMB -->
       <div id="content">
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb"><li class="breadcrumb-item"><a href="#">Panel de control</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Gestionar compras
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Panel de control</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Gestionar compras
             </li>
           </ol>
         </nav>
@@ -313,5 +339,18 @@
       </div>
       <!-- Fin CONTENIDO -->
     </div>
+    <!-- Scripts Javascript -->
+    <script src="js/main.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
