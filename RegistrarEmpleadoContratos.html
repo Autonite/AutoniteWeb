@@ -132,7 +132,7 @@
                   class="icon ion-md-pricetag p-1"></i>Ventas
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-ventas">
-                <li>r
+                <li>
                   <a href="RegistrarVentas.html"><i class="icon ion-md-radio-button-off"></i>Registrar
                     ventas</a>
                 </li>
@@ -205,55 +205,51 @@
           <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Datos del empleado</a>
+                <a class="nav-link" href="">Datos del empleado</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#">Datos del contrato</a>
+                <a class="nav-link active">Datos del contrato</a>
               </li>
             </ul>
           </div>
           <div class="card-body">
             <form>
               <div class="form-group">
-                <label">Documento de identidad</label>
-                  <input type="number" min="0.00" class="form-control"
-                    placeholder="Ingresa el documento de identidad..." required>
+                <label>Tipo de contrato</label>
+                <select class="form-control">
+                  <option selected>Seleccionar...</option>
+                  <option value="A">Contrato a termino fijo</option>
+                  <option value="B">Contrato indefinido</option>
+                  <option value="C">Contrato de aprendizaje</option>
+                </select>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label">Nombres</label>
-                    <input type="text" class="form-control" placeholder="Ingresa el nombre..." required>
+                  <label">Inicio del contrato</label>
+                    <input type="date" class="form-control" placeholder="Ingresa el nombre..." required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label">Apellidos</label>
-                    <input type="text" class="form-control" placeholder="Ingresa el apellido..." required>
+                  <label">Fin del contrato</label>
+                    <input type="date" class="form-control" placeholder="Ingresa el apellido..." required>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label">Teléfono</label>
+                  <label">Salario</label>
                     <input type="number" min="0.00" class="form-control" placeholder="Ingresa el número de teléfono..."
                       required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label">Edad</label>
+                  <label">Duración jornada</label>
                     <input type="number" min="0.00" class="form-control" placeholder="Ingresa la edad..." required>
                 </div>
-              </div>
-              <div class="form-group">
-                <label">Dirección</label>
-                  <input type="text" class="form-control" placeholder="Ingresa la dirección..." required>
-              </div>
-              <div class="form-group">
-                <label">Correo eléctronico</label>
-                  <input type="email" class="form-control" placeholder="Ingresa el correo eléctronico..." required>
               </div>
             </form>
           </div>
           <div class="card-footer">
             <div class="text-right">
               <button type="button" class="btn btn-danger md-4 hover-dark">Regresar</button>
-              <button type="submit" class="btn btn-primary md-4 hover-dark">Guardar</button>
+              <button type="submit" class="btn btn-primary md-4 hover-dark">Siguiente</button>
             </div>
           </div>
         </div>
