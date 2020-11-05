@@ -248,13 +248,17 @@ body {
 /* ---------------- */
 /* FORMATO CONTENTS */
 /* ---------------- */
-
 .breadcrumb {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 0;
-  padding: 13.5px 20px;
+  padding: 14.5px 20px;
+  background: transparent;
   margin-bottom: 0;
 }
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: "»";
+  color: rgba(0, 0, 0, 0.35);
+}
+
 #content {
   width: 100%;
   margin-top: 76px;
@@ -269,6 +273,30 @@ body {
   padding: 20px;
   transition: all 0.3s;
 }
+/* ------------------ */
+/* ELEMENTOS GLOBALES */
+/* ------------------ */
+
+.hover-light:hover{
+color: white !important;
+}
+
+.hover-dark:hover{
+    color: black !important;
+}
+
+button {
+    font-weight: bold !important;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+    transition: all 0.25s !important;
+    margin: 0px 5px;
+}
+
+button:hover{
+    background: transparent !important;
+}
+
 /* ---------------- */
 /* CONTENIDO PAGINA */
 /* ---------------- */
