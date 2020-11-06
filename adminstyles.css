@@ -277,24 +277,27 @@ body {
 /* ELEMENTOS GLOBALES */
 /* ------------------ */
 
-.hover-light:hover{
-color: white !important;
+.hover-light:hover {
+  color: white !important;
 }
 
-.hover-dark:hover{
-    color: black !important;
+.hover-dark:hover {
+  color: black !important;
 }
 
 button {
-    font-weight: bold !important;
-    padding-right: 20px !important;
-    padding-left: 20px !important;
-    transition: all 0.25s !important;
-    margin: 0px 5px;
+  font-weight: bold !important;
+  padding-right: 20px !important;
+  padding-left: 20px !important;
+  transition: all 0.25s !important;
+  margin: 0px 5px;
 }
 
-button:hover{
-    background: transparent !important;
+button:hover {
+  background: transparent !important;
+}
+button:active {
+  transform: scale(1.05);
 }
 
 /* ---------------- */
