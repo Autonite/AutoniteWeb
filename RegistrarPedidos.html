@@ -203,11 +203,11 @@
         <div id="content">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb align-items-center">
-                    <h2 class="font-weight-bold m-0 p-0">» Registrar venta</h2>
+                    <h2 class="font-weight-bold m-0 p-0">» Registrar pedidos</h2>
                     <li class="ml-auto breadcrumb-item"><a href="Dashboard.html"><i
                                 class="icon ion-md-home px-1"></i>Inicio</a>
-                    <li class="breadcrumb-item"><a href="ConsultarVentas.html">Consultar ventas</a></li>
-                    <li class="breadcrumb-item active">Registrar venta</li>
+                    <li class="breadcrumb-item"><a href="ConsultarPedidos.html">Consultar pedidos</a></li>
+                    <li class="breadcrumb-item active">Registrar pedidos</li>
                 </ol>
                 <hr class="m-0 p-0">
             </nav>
@@ -215,31 +215,24 @@
             <div id="page">
                 <!-- Inicio CONTENIDO PAGINA -->
                 <div class="card" id="forms">
-                    <div class="card-header">Registrar venta
+                    <div class="card-header">Registrar pedidos
                     </div>
                     <div class="card-body">
                         <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label>Documento vendedor</label>
-                                    <input type="number" min="0.00" class="form-control"
-                                        placeholder="Ingresa el documento del vendedor..." required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Documento cliente</label>
-                                    <input type="number" min="0.00" class="form-control"
-                                        placeholder="Ingresa el documento del cliente..." required>
-                                </div>
+                            <div class="form-group">
+                                <label>Documento comprador</label>
+                                <input type="number" min="0.00" class="form-control"
+                                    placeholder="Ingresa el documento del comprador..." required>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label>Hora venta</label>
-                                    <input type="time" min="0.00" class="form-control" required>
+                                    <label>Fecha de realizado</label>
+                                    <input type="date" min="0.00" class="form-control"
+                                        placeholder="Ingresa la fecha de realizado..." required>
                                 </div>
-
                                 <div class="form-group col-md-6">
-                                    <label>Fecha venta</label>
-                                    <input type="date" class="form-control" required>
+                                    <label>Fecha de entrega</label>
+                                    <input type="date" min="0.00" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -247,20 +240,22 @@
                                 <textarea class="form-control" rows="2" placeholder="Ingresa la descripción..."
                                     required></textarea>
                             </div>
+                        </form>
                     </div>
-                    </form>
                     <div class="card-footer">
                         <div class="text-right">
-                            <a href="Dashboard.html"><button type="button"
-                                    class="btn btn-danger md-4 hover-dark">Cancelar</button></a>
-                            <a href="RegistrarServicio.html"><button type="submit"
+                            <a href="ConsultarPedidos.html"><button type="button"
+                                    class="btn btn-danger md-4 hover-dark">Regresar</button></a>
+                            <a href="RegistrarCompra.html"><button type="submit"
                                     class="btn btn-primary md-4 hover-dark">Siguiente</button></a>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
-        <!-- Fin CONTENIDO PAGINA -->
+    </div>
+    <!-- Fin CONTENIDO PAGINA -->
     </div>
     <!-- Fin CONTENIDO -->
     <!-- Scripts Javascript -->

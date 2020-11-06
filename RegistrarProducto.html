@@ -105,7 +105,7 @@
         <div id="accordion">
           <ul class="list-unstyled">
             <li>
-              <a href="#PanelControl.html" id="aaaa"><i class="icon ion-md-speedometer p-1"></i>Panel de
+              <a href="Dashboard.html" id="aaaa"><i class="icon ion-md-speedometer p-1"></i>Panel de
                 control</a>
             </li>
             <hr />
@@ -114,11 +114,11 @@
                   class="icon ion-md-cart p-1"></i>Compras</a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-compras">
                 <li>
-                  <a href="GestionarCompras.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                  <a href="ConsultarPedidos.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
                     compras</a>
                 </li>
                 <li>
-                  <a href="GestionarProveedores.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                  <a href="ConsultarProveedores.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
                     proveedores</a>
                 </li>
                 <li>
@@ -133,8 +133,8 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-ventas">
                 <li>
-                  <a href="GestionarVentas.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
-                    ventas</a>
+                  <a href="RegistrarVentas.html"><i class="icon ion-md-radio-button-off"></i>Registrar ventas
+                  </a>
                 </li>
                 <li>
                   <a href="RevisarTareas.html"><i class="icon ion-md-radio-button-off"></i>Revisar
@@ -156,7 +156,7 @@
                     inventario</a>
                 </li>
                 <li>
-                  <a href="GestionarProductos.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                  <a href="ConsultarProductos.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
                     productos</a>
                 </li>
               </ul>
@@ -167,7 +167,7 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                 <li>
-                  <a href="GestionarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                  <a href="ConsultarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
                     usuarios</a>
                 </li>
                 <li>
@@ -191,9 +191,9 @@
     <div id="content">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb align-items-center">
-          <h2 class="font-weight-bold m-0 p-0">» Inicio</h2>
+          <h2 class="font-weight-bold m-0 p-0">» Registrar producto</h2>
           <li class="ml-auto breadcrumb-item"><a href="Dashboard.html"><i class="icon ion-md-home px-1"></i>Inicio</a>
-          <li class="breadcrumb-item"><a href="GestionarProductos.html">Gestionar productos</a></li>
+          <li class="breadcrumb-item"><a href="ConsultarInventario.html">Consultar inventario</a></li>
           <li class="breadcrumb-item active">Registrar productos</li>
         </ol>
         <hr class="m-0 p-0">
@@ -215,11 +215,8 @@
                 <textarea class="form-control" rows="2" placeholder="Ingresa la descripción del producto..."
                   required></textarea>
               </div>
+
               <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label>Cantidad</label>
-                  <input type="number" class="form-control" placeholder="Ingresa la cantidad del producto..." required>
-                </div>
                 <div class="form-group col-md-6">
                   <label>Clasificación</label>
                   <select class="form-control">
@@ -232,8 +229,6 @@
                     Clasificación B: Rotación media<br>
                     Clasificación C: Rotación baja</small>
                 </div>
-              </div>
-              <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>Valor de compra</label>
                   <input type="number" min="0.00" class="form-control" placeholder="Ingresa el valor de compra..."
@@ -250,8 +245,10 @@
           <div class="card-footer">
             <!-- col-sm-1 col-xs-1 col-md-1 col-lg-1 -->
             <div class="text-right">
-              <button type="button" class="btn btn-danger md-4 hover-dark">Cancelar</button>
-              <button type="submit" class="btn btn-primary md-4 hover-dark">Guardar</button>
+              <a href="ConsultarInventario.html"></a><button type="button"
+                class="btn btn-danger md-4 hover-dark">Cancelar</button></a>
+              <a href="ConsultarInventario.html"><button type="submit"
+                  class="btn btn-primary md-4 hover-dark">Guardar</button></a>
             </div>
           </div>
         </div>

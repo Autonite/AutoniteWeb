@@ -105,7 +105,7 @@
         <div id="accordion">
           <ul class="list-unstyled">
             <li>
-              <a href="#PanelControl.html" id="aaaa"><i class="icon ion-md-speedometer p-1"></i>Panel de
+              <a href="Dashboard.html" id="aaaa"><i class="icon ion-md-speedometer p-1"></i>Panel de
                 control</a>
             </li>
             <hr />
@@ -114,11 +114,11 @@
                   class="icon ion-md-cart p-1"></i>Compras</a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-compras">
                 <li>
-                  <a href="GestionarCompras.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                  <a href="ConsultarPedidos.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
                     compras</a>
                 </li>
                 <li>
-                  <a href="GestionarProveedores.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                  <a href="ConsultarProveedores.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
                     proveedores</a>
                 </li>
                 <li>
@@ -156,7 +156,7 @@
                     inventario</a>
                 </li>
                 <li>
-                  <a href="GestionarProductos.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                  <a href="ConsultarProductos.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
                     productos</a>
                 </li>
               </ul>
@@ -167,7 +167,7 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                 <li>
-                  <a href="GestionarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                  <a href="ConsultarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
                     usuarios</a>
                 </li>
                 <li>
@@ -191,9 +191,9 @@
     <div id="content">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb align-items-center">
-          <h2 class="font-weight-bold m-0 p-0">»Registrar empleado</h2>
+          <h2 class="font-weight-bold m-0 p-0">» Registrar empleado</h2>
           <li class="ml-auto breadcrumb-item"><a href="Dashboard.html"><i class="icon ion-md-home px-1"></i>Inicio</a>
-          <li class="breadcrumb-item"><a href="GestionarProductos.html">Gestionar empleados</a></li>
+          <li class="breadcrumb-item"><a href="ConsultarUsuarios.html">Consultar usuarios</a></li>
           <li class="breadcrumb-item active">Registrar empleados</li>
         </ol>
         <hr class="m-0 p-0">
@@ -205,7 +205,7 @@
           <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
               <li class="nav-item">
-                <a class="nav-link" href="">Datos del empleado</a>
+                <a class="nav-link disabled" href="RegistrarEmpleado.html">Datos del empleado</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active">Datos del contrato</a>
@@ -226,30 +226,35 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label">Inicio del contrato</label>
-                    <input type="date" class="form-control" placeholder="Ingresa el nombre..." required>
+                    <input type="date" class="form-control" placeholder="Ingresa la fecha en la que inicia e..."
+                      required>
                 </div>
                 <div class="form-group col-md-6">
                   <label">Fin del contrato</label>
-                    <input type="date" class="form-control" placeholder="Ingresa el apellido..." required>
+                    <input type="date" class="form-control" placeholder="Ingresa la fecha del fin de contrato..."
+                      required>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label">Salario</label>
-                    <input type="number" min="0.00" class="form-control" placeholder="Ingresa el número de teléfono..."
-                      required>
+                    <input type="number" min="0.00" class="form-control" placeholder="Ingresa el salario..." required>
                 </div>
                 <div class="form-group col-md-6">
                   <label">Duración jornada</label>
-                    <input type="number" min="0.00" class="form-control" placeholder="Ingresa la edad..." required>
+                    <input type="number" max="24" class="form-control"
+                      placeholder="Ingresa la duración de la jornada..." required>
+                    <small class="form-text text-muted">Número de horas diarias</small>
                 </div>
               </div>
             </form>
           </div>
           <div class="card-footer">
             <div class="text-right">
-              <button type="button" class="btn btn-danger md-4 hover-dark">Regresar</button>
-              <button type="submit" class="btn btn-primary md-4 hover-dark">Siguiente</button>
+              <a href="RegistrarEmpleado.html"><button type="submit"
+                  class="btn btn-danger md-4 hover-dark">Regresar</button></a>
+              <a href="ConsultarUsuarios.html"><button type="submit"
+                  class="btn btn-primary md-4 hover-dark">Guardar</button></a>
             </div>
           </div>
         </div>
