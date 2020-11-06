@@ -1,0 +1,138 @@
+.table-responsive {
+  margin: 30px 0;
+
+}
+.table-wrapper {
+  
+  min-width: 1000px;
+  margin-top: -10px;
+  padding: 0;    
+}
+
+.search-box {
+  position: relative;        
+  float: right;
+}
+
+.search-box input {
+  padding-left: 35px;
+  border-color: #ddd;
+  box-shadow: none;
+}
+
+.search-box input:focus {
+border-color: #3FBAE4;
+}
+
+.search-box i {
+  color: #a0a5b1;
+  position: absolute;
+  font-size: 19px;
+  top: 8px;
+  left: 10px;
+}
+
+.table-title {
+  padding-bottom: 70px;
+  margin: 10px 0 10px;
+}
+
+.table-title h2 {
+  margin: 8px 0 0;
+  font-size: 22px;
+}
+
+th{
+ text-align:center;
+  background: #353B3E !important;
+  color:white;
+}
+
+table.table-striped tbody tr:nth-of-type(odd) {
+  background-color:rgba(0, 0, 0, 0.065);
+}
+
+table.table-striped.table-hover tbody tr:hover {
+  background: #B2BDC7;
+  
+}
+
+table.table th i {
+  font-size: 13px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+table.table td:last-child {
+  min-width: 130px;
+}
+
+table.table td a {
+  color: #a0a5b1;
+  display: inline-block;
+  margin: 0 5px;
+} 
+
+table.table td a.edit {
+  color:#535353;
+
+}
+table.table td a.delete {
+  color: #535353;
+  
+}
+.table-bordered td, .table-bordered th {
+  border: none;
+  padding: 17px;
+  
+}
+
+table.table td i {
+  font-size: 19px;
+}    
+
+.pagination {
+  float: right;
+  margin: 0 0 5px;
+}
+
+.pagination li a {
+  border: none;
+  font-size: 95%;
+  width: 30px;
+  height: 30px;
+  color: #999;
+  margin: 0 2px;
+  line-height: 30px;
+  border-radius: 30px !important;
+  text-align: center;
+  padding: 0;
+}
+
+.pagination li a:hover {
+  color: rgb(102, 102, 102);
+}	
+
+.pagination li.active a {
+  background: #007bff;
+}
+
+.pagination li.active a:hover {        
+  background: #007bff;
+}
+
+.pagination li.disabled i {
+  color: #ccc;
+}
+
+.pagination li i {
+  font-size: 16px;
+  padding-top: 6px
+}
+
+.hint-text {
+  float: left;
+  margin-top: 6px;
+  font-size: 95%;
+}       
+

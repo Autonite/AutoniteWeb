@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="icon" href="img/logo.png" />
-  <title>Panel de control | Autonite</title>
+  <title>Empleados | Autonite</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -16,6 +16,7 @@
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet" />
 
   <link href="adminstyles.css" rel="stylesheet" />
+  <link href="formularios.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -104,7 +105,7 @@
         <div id="accordion">
           <ul class="list-unstyled">
             <li>
-              <a href="#PanelControl.html" id="aaaa"><i class="icon ion-md-speedometer p-1"></i>Panel de
+              <a href="Dashboard.html" id="aaaa"><i class="icon ion-md-speedometer p-1"></i>Panel de
                 control</a>
             </li>
             <hr />
@@ -113,11 +114,11 @@
                   class="icon ion-md-cart p-1"></i>Compras</a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-compras">
                 <li>
-                  <a href="GestionarCompras.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                  <a href="ConsultarPedidos.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
                     compras</a>
                 </li>
                 <li>
-                  <a href="GestionarProveedores.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                  <a href="ConsultarProveedores.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
                     proveedores</a>
                 </li>
                 <li>
@@ -131,8 +132,8 @@
                   class="icon ion-md-pricetag p-1"></i>Ventas
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-ventas">
-                <li>
-                  <a href="GestionarVentas.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                <li>r
+                  <a href="RegistrarVentas.html"><i class="icon ion-md-radio-button-off"></i>Registrar
                     ventas</a>
                 </li>
                 <li>
@@ -155,7 +156,7 @@
                     inventario</a>
                 </li>
                 <li>
-                  <a href="GestionarProductos.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                  <a href="ConsultarProductos.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
                     productos</a>
                 </li>
               </ul>
@@ -166,7 +167,7 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                 <li>
-                  <a href="GestionarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
+                  <a href="ConsultarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Gestionar
                     usuarios</a>
                 </li>
                 <li>
@@ -190,16 +191,85 @@
     <div id="content">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb align-items-center">
-          <h2 class="font-weight-bold m-0 p-0">» Inicio</h2>
+          <h2 class="font-weight-bold m-0 p-0">» Registrar empleado</h2>
           <li class="ml-auto breadcrumb-item"><a href="Dashboard.html"><i class="icon ion-md-home px-1"></i>Inicio</a>
-          <li class="breadcrumb-item"><a href="GestionarProductos.html">Gestionar productos</a></li>
-          <li class="breadcrumb-item active">Registrar productos</li>
+          <li class="breadcrumb-item"><a href="ConsultarUsuarios.html">Consultar usuarios</a></li>
+          <li class="breadcrumb-item active">Registrar empleados</li>
         </ol>
         <hr class="m-0 p-0">
       </nav>
       <!-- Fin BREADCRUMB -->
       <div id="page">
         <!-- Inicio CONTENIDO PAGINA -->
+        <div class="card" id="forms">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Datos del empleado</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Datos del contrato</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label">Documento de identidad</label>
+                  <input type="number" min="0.00" class="form-control"
+                    placeholder="Ingresa el documento de identidad..." required>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label">Nombres</label>
+                    <input type="text" class="form-control" placeholder="Ingresa el nombre..." required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label">Apellidos</label>
+                    <input type="text" class="form-control" placeholder="Ingresa el apellido..." required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label">Teléfono</label>
+                    <input type="tel" min="0" class="form-control" placeholder="Ingresa el número de teléfono..."
+                      required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label">Edad</label>
+                    <input type="number" min="0" max="150" class="form-control" placeholder="Ingresa la edad..."
+                      required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label">Cargo del empleado</label>
+                    <select class="form-control">
+                      <option selected>Seleccionar...</option>
+                      <option value="administrador">Administrador</option>
+                      <option value="jefemecanicos">Jefe de mecánicos</option>
+                      <option value="secretaria">Secretaría</option>
+                      <option value="mecanico">Mecánico</option>
+                    </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label">Dirección</label>
+                  <input type="text" class="form-control" placeholder="Ingresa la dirección..." required>
+              </div>
+              <div class="form-group">
+                <label">Correo eléctronico</label>
+                  <input type="email" class="form-control" placeholder="Ingresa el correo eléctronico..." required>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <div class="text-right">
+              <a href="ConsultarUsuarios.html"><button type="submit"
+                  class="btn btn-danger md-4 hover-dark">Cancelar</button></a>
+              <a href="RegistrarEmpleadoContratos.html"><button type="submit"
+                  class="btn btn-primary md-4 hover-dark">Siguiente</button></a>
+            </div>
+          </div>
+        </div>
         <!-- Fin CONTENIDO PAGINA -->
       </div>
     </div>
