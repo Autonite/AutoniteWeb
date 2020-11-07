@@ -48,9 +48,13 @@ body {
 }
 
 #navbar a:hover,
-#navbar button:hover {
+#navbar button:hover i {
   color: #007bff !important;
-  /*font-weight: bold;*/
+}
+
+#navbar a:active,
+#navbar button:active {
+  transform: scale(1.25);
 }
 
 #navbar ul button {
