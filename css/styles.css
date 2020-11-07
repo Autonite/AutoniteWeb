@@ -78,7 +78,7 @@ p {
 }
 
 #hero {
-  background-image: url(img/man-with-checking-car.jpg);
+  background-image: url(../img/imgPrincipal.jpg);
   background-size: cover;
   padding-top: 110px;
   padding-bottom: 70px;
@@ -236,7 +236,7 @@ img {
 
 /* LOGIN */
 .image-container {
-  background: url(img/ImagLogin1.jpg) center no-repeat;
+  background: url(../img/imgLogin.jpg) center no-repeat;
   background-size: cover;
   height: 100vh;
 }
