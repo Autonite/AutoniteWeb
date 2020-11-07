@@ -23,7 +23,7 @@
 }
 
 .table-responsive {
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .table-wrapper {
@@ -107,21 +107,12 @@ table.table td i {
   color: rgb(102, 102, 102);
 }
 
-.pagination li.active a {
-  background: #007bff;
-}
-
-.pagination li.active a:hover {
-  background: #007bff;
-}
-
 .pagination li.disabled i {
   color: #ccc;
 }
 
 .pagination li i {
-  font-size: 16px;
-  padding-top: 6px;
+  margin: auto;
 }
 
 .hint-text {

@@ -52,11 +52,6 @@ body {
   color: #007bff !important;
 }
 
-#navbar a:active,
-#navbar button:active {
-  transform: scale(1.25);
-}
-
 #navbar ul button {
   min-width: 40px;
   background: transparent;
