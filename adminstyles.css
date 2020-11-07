@@ -57,6 +57,7 @@ body {
   min-width: 40px;
   background: transparent;
   border: none;
+  outline: none;
 }
 
 /* ----------------- */

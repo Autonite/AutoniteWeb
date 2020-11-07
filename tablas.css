@@ -25,10 +25,12 @@
 .table-responsive {
   margin: 30px 0;
 }
+
 .table-wrapper {
   min-width: 1000px;
   margin-top: -10px;
-  padding: 0;
+  padding: 0px;
+  margin-right: unset;
 }
 
 .table-title {
