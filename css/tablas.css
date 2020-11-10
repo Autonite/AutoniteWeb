@@ -1,12 +1,17 @@
+thead {
+  text-align: center;
+  background: #353b3e !important;
+  color: white;
+}
+
 .search-box {
+  margin: auto;
+  width: 220px;
   position: relative;
   float: right;
 }
-
-.search-box input {
+.search-box .form-control {
   padding-left: 35px;
-  border-color: #ddd;
-  box-shadow: none;
 }
 
 .search-box input:focus {
@@ -14,59 +19,20 @@
 }
 
 .search-box i {
-  color: #a0a5b1;
+  color: rgba(0, 0, 0, 0.45);
   position: absolute;
-  font-size: 19px;
+  font-size: 1.2rem;
+  transform: scaleX(-1);
   top: 5px;
   left: 12px;
-  transform: scaleX(-1);
-}
-
-.table-responsive {
-  margin: 20px 0;
-}
-
-.table-wrapper {
-  min-width: 1000px;
-  margin-top: -10px;
-  padding: 0px;
-  margin-right: unset;
-}
-
-.table-title {
-  padding-bottom: 70px;
-  margin: 10px 0 10px;
-}
-
-.table-title h2 {
-  margin: 8px 0 0;
-  font-size: 22px;
-}
-
-th {
-  text-align: center;
-  background: #353b3e !important;
-  color: white;
 }
 
 table.table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.065);
 }
 
-table.table-striped.table-hover tbody tr:hover {
-  background: #b2bdc7;
-}
-
-table.table th i {
-  font-size: 13px;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-table.table td a {
-  color: #a0a5b1;
-  display: inline-block;
-  margin: 0 5px;
+table tbody tr:hover {
+  background: rgba(0, 123, 255, 0.3) !important;
 }
 
 table.table td a.edit {
@@ -78,11 +44,7 @@ table.table td a.delete {
 .table-bordered td,
 .table-bordered th {
   border: none;
-  padding: 17px;
-}
-
-table.table td i {
-  font-size: 19px;
+  /* padding: 17px; */
 }
 
 .pagination {
@@ -120,3 +82,22 @@ table.table td i {
   margin-top: 6px;
   font-size: 95%;
 }
+
+#cliente {
+  margin-top: 100px;
+}
+/* Despues se combina con formularios.css */
+.card-header,
+.card-footer {
+  font-weight: bold;
+  font-size: 1.05rem;
+  background-color: #f0f3f5;
+}
+/* 
+#forms {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 3px 3px 0px gray;
+  -moz-box-shadow: 2px 3px 3px 0px gray;
+  box-shadow: 3px 5px 4px 0px gray;
+} */
+/* Despues se combina con formularios.css */
