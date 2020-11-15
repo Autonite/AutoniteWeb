@@ -36,11 +36,15 @@ table tbody tr:hover {
 }
 
 table.table td a.edit {
-  color: #535353;
+  color: #ffc107;
 }
 table.table td a.delete {
-  color: #535353;
+  color: #dc3545;
 }
+table.table td a.details {
+  color: #007bff;
+}
+
 .table-bordered td,
 .table-bordered th {
   border: none;
