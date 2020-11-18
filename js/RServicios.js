@@ -19,5 +19,8 @@ function validar(){
     Swal.fire("Usuario muy corto");
     return false;
 }
-
+//if(!expresion1.test(user)) {
+  //  Swal.fire("Usuario invalido");
+    //return false;
+//}
 }

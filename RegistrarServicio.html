@@ -17,6 +17,7 @@
 
   <link href="css/adminstyles.css" rel="stylesheet" />
   <link href="css/formularios.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
 <body>
@@ -210,6 +211,7 @@
         </ol>
         <hr class="m-0 p-0" />
       </nav>
+      <form class="form-registro" onsubmit="return validar();">
       <!-- Fin BREADCRUMB -->
       <div id="page">
         <!-- Inicio CONTENIDO PAGINA -->
@@ -217,6 +219,7 @@
           <div class="card-header">Datos del servicio</div>
           <div class="card-body">
             <form>
+              <form class="form-registro" onsubmit="return validar();">
               <div class="form-group">
                 <label>Tipo de servicio</label>
                 <select class="form-control">
@@ -293,6 +296,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
+    <script src="js/RServicio.js"></script>
 </body>
 
 </html>
