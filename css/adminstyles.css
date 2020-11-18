@@ -19,7 +19,9 @@ body {
 .bg-moredark {
   background: #1d2124 !important;
 }
-
+.bg-light {
+  background: #f0f3f5 !important;
+}
 /* ---------------- */
 /* CONTENIDO NAVBAR */
 /* ---------------- */

@@ -26,8 +26,7 @@ thead {
   top: 5px;
   left: 12px;
 }
-
-table.table-striped tbody tr:nth-of-type(odd) {
+º table.table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.065);
 }
 
@@ -35,13 +34,16 @@ table tbody tr:hover {
   background: rgba(0, 123, 255, 0.3) !important;
 }
 
-table.table td a.edit {
+table.table td a.icongreen {
+  color: #28a745;
+}
+table.table td a.iconyellow {
   color: #ffc107;
 }
-table.table td a.delete {
+table.table td a.iconred {
   color: #dc3545;
 }
-table.table td a.details {
+table.table td a.iconblue {
   color: #007bff;
 }
 
@@ -96,6 +98,16 @@ table.table td a.details {
   font-weight: bold;
   font-size: 1.05rem;
   background-color: #f0f3f5;
+}
+
+.filtroRegistros input:focus {
+  border-color: #3fbae4;
+}
+
+.filtroRegistros {
+  margin: auto;
+  width: 220px;
+  position: relative;
 }
 /* 
 #forms {

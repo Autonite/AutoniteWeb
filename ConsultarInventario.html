@@ -115,7 +115,7 @@
                   class="icon ion-md-cart p-1"></i>Compras</a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-compras">
                 <li>
-                  <a href="ConsultarCompras.html"><i class="icon ion-md-radio-button-off"></i>Compras
+                  <a href="ComprasAgendadas.html"><i class="icon ion-md-radio-button-off"></i>Compras
                     agendadas</a>
                 </li>
                 <li>
@@ -134,7 +134,7 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-ventas">
                 <li>
-                  <a href="ConsultarVentas.html"><i class="icon ion-md-radio-button-off"></i>Ventas
+                  <a href="VentasAgendadas.html"><i class="icon ion-md-radio-button-off"></i>Ventas
                     agendadas</a>
                 </li>
                 <li>
@@ -204,10 +204,13 @@
       <div id="page">
         <!-- Inicio CONTENIDO PAGINA -->
 
+
         <div class="table-options mb-3">
           <a href="RegistrarProducto.html"><button class="btn btn-primary hover-dark">
               Registrar producto
             </button></a>
+
+
 
           <div class="search-box">
             <i class="icon ion-md-search"></i>
@@ -217,15 +220,29 @@
         <div class="table-responsive">
           <div class="table-wrapper">
             <table class="table table-striped table-hover table-bordered order-table text-center">
+
+              <label>
+                Mostrar
+                <select name="example_length" aria-controls="example" class="">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+                registros
+              </label>
+
               <thead>
                 <tr>
                   <th>ID</th>
                   <th>Nombre</th>
                   <th>Descripción</th>
-                  <th>Cantidad</th>
                   <th>Clasificación</th>
                   <th>Valor compra</th>
                   <th>Valor venta</th>
+                  <th>Entradas / Salidas</th>
+                  <th>Stock</th>
+                  <th>Estado</th>
                   <th>Funciones</th>
                 </tr>
               </thead>
@@ -234,14 +251,18 @@
                   <td>RP001</td>
                   <td>Retenedores</td>
                   <td>....</td>
-                  <td>4</td>
                   <td>..</td>
                   <td>$ 230.000</td>
                   <td>$ 350.000</td>
+                  <td><a href="#" class="mx-2 h5 icongreen" title="Entradas" data-toggle="tooltip"><i
+                        class="icon ion-md-log-in"></i></a> / <a href="#" class="mx-2 h5 iconred" title="Salidas"
+                      data-toggle="tooltip"><i class="icon ion-md-log-out"></i></a></td>
+                  <td>4</td>
+                  <td></td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -254,9 +275,9 @@
                   <td>$ 420.000</td>
                   <td>$ 540.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -269,9 +290,9 @@
                   <td>$ 28.023</td>
                   <td>$ 123.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -284,9 +305,9 @@
                   <td>$ 75.016</td>
                   <td>$ 345.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -299,9 +320,9 @@
                   <td>$ 101.000</td>
                   <td>$ 200.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -315,9 +336,9 @@
                   <td>$ 101.000</td>
                   <td>$ 250.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -331,9 +352,9 @@
                   <td>$ 28.023</td>
                   <td>$ 345.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -347,9 +368,9 @@
                   <td>$ 230.000</td>
                   <td>$ 570.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -363,9 +384,9 @@
                   <td>$ 230.000</td>
                   <td>$ 456.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -379,9 +400,9 @@
                   <td>$ 420.000</td>
                   <td>$ 840.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -395,9 +416,9 @@
                   <td>$ 28.023</td>
                   <td>$ 213.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -411,9 +432,9 @@
                   <td>$ 75.016</td>
                   <td>$ 85.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -427,9 +448,9 @@
                   <td>$ 230.000</td>
                   <td>$ 543.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -443,9 +464,9 @@
                   <td>$ 420.000</td>
                   <td>$ 840.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
@@ -458,9 +479,9 @@
                   <td>$ 28.023</td>
                   <td>$ 86.000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 edit" title="Editar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 delete" title="Eliminar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
