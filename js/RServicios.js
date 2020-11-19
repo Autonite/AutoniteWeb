@@ -1,26 +1,19 @@
 function validar(){
-    DocumentoV = document.getElementById("DocumentoV").value;
-    DocumentoC = document.getElementById("DocumentoC").value;
-    Hora = document.getElementById("Hora").value;
-    Fecha = document.getElementById("Fecha").value;
     Descripcion = document.getElementById("Descripcion").value;
-   
+    Cantidad = document.getElementById("Cantidad").value;
+    Valor = document.getElementById("Valor").value;
     
-
- if(DocumentoV == "" || DocumentoC == ""){
+    if(Descripcion == "" || Cantidad == ""|| Valor == ""){
     Swal.fire("Todos los campos son obligatorios");
     return false;
 }
- if(DocumentoV.length > 10) {
-    Swal.fire("Usuario muy largo");
+ if(Cantidad.length < 1) {
+    Swal.fire("Cantidad inexistente");
     return false;
 }
- if(DocumentoV.length < 1) {
+ if(Valor.length < 1) {
     Swal.fire("Usuario muy corto");
     return false;
 }
-//if(!expresion1.test(user)) {
-  //  Swal.fire("Usuario invalido");
-    //return false;
-//}
-}
+
+}  

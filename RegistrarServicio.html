@@ -219,7 +219,7 @@
           <div class="card-header">Datos del servicio</div>
           <div class="card-body">
             <form>
-              <form class="form-registro" onsubmit="return validar();">
+              
               <div class="form-group">
                 <label>Tipo de servicio</label>
                 <select class="form-control">
@@ -231,7 +231,7 @@
               </div>
               <div class="form-group">
                 <label>Descripción</label>
-                <textarea class="form-control" rows="2" placeholder="Ingresa la descripción..." required></textarea>
+                <textarea class="form-control" id="Descripcion" rows="2" placeholder="Ingresa la descripción..." ></textarea>
               </div>
               <div class="form-group">
                 <label>Producto empleado</label>
@@ -246,12 +246,12 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>Cantidad empleada</label>
-                  <input type="number" min="0" class="form-control" placeholder="Ingresa la cantidad..." required />
+                  <input type="number" min="0" id="Cantidad" class="form-control" placeholder="Ingresa la cantidad..." />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Valor del servicio</label>
-                  <input type="number" min="0.00" class="form-control" placeholder="Ingresa el valor del servicio..."
-                    required />
+                  <input type="number" min="0.00" id="Valor" class="form-control" placeholder="Ingresa el valor del servicio..."
+                     />
                   <small class="form-text text-muted">Valor del servicio (sin el coste de los productos usados)</small>
                 </div>
               </div>
@@ -296,7 +296,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
-    <script src="js/RServicio.js"></script>
+    <script src="js/RServicios.js"></script>
 </body>
 
 </html>
