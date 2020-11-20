@@ -95,6 +95,75 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="modal-table" data-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-light">
+            <h5 class="modal-title font-weight-bold">Entradas / Salidas</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="table-responsive">
+              <table class="table table-hover text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Fecha de entrada</th>
+                    <th scope="col">Hora de entrada</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>10</td>
+                    <td>10/10/2020</td>
+                    <td>5:56 PM</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>20</td>
+                    <td>20/11/2020</td>
+                    <td>4:22 PM</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>8</td>
+                    <td>25/11/2020</td>
+                    <td>11:59 AM</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>14</td>
+                    <td>30/09/2020</td>
+                    <td>5:20 PM</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>23</td>
+                    <td>20/12/2020</td>
+                    <td>10:22 AM</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>18</td>
+                    <td>01/05/2021</td>
+                    <td>02:25 PM</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer bg-light">
+            <button type="button" class="btn btn-dark hover-dark" data-dismiss="modal">
+              Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Fin MODALS -->
     <!-- Inicio SIDEBAR -->
     <div class="sidebar-div">
@@ -168,12 +237,12 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                 <li>
-                  <a href="ConsultarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Consultar
-                    usuarios</a>
+                  <a href="ConsultarEmpleados.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    empleados</a>
                 </li>
                 <li>
-                  <a href="ModificarContratos.html"><i class="icon ion-md-radio-button-off"></i>Modificar
-                    contratos</a>
+                  <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    clientes</a>
                 </li>
                 <li>
                   <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
@@ -203,15 +272,10 @@
       <!-- Fin BREADCRUMB -->
       <div id="page">
         <!-- Inicio CONTENIDO PAGINA -->
-
-
         <div class="table-options mb-3">
           <a href="RegistrarProducto.html"><button class="btn btn-primary hover-dark">
               Registrar producto
             </button></a>
-
-
-
           <div class="search-box">
             <i class="icon ion-md-search"></i>
             <input type="text" class="form-control" placeholder="Buscar" />
@@ -254,232 +318,165 @@
                   <td>..</td>
                   <td>$ 230.000</td>
                   <td>$ 350.000</td>
-                  <td><a href="#" class="mx-2 h5 icongreen" title="Entradas" data-toggle="tooltip"><i
-                        class="icon ion-md-log-in"></i></a> / <a href="#" class="mx-2 h5 iconred" title="Salidas"
-                      data-toggle="tooltip"><i class="icon ion-md-log-out"></i></a></td>
+                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
+                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
+                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
                   <td>4</td>
-                  <td></td>
+                  <td><span class="badge badge-success">Disponible</span></td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
                 <tr>
-                  <td>RP002</td>
-                  <td>Llantas</td>
+                  <td>RP001</td>
+                  <td>Retenedores</td>
                   <td>....</td>
-                  <td>2</td>
                   <td>..</td>
-                  <td>$ 420.000</td>
-                  <td>$ 540.000</td>
+                  <td>$ 230.000</td>
+                  <td>$ 350.000</td>
+                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
+                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
+                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
+                  <td>4</td>
+                  <td><span class="badge badge-warning">Stock bajo</span></td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
                 <tr>
-                  <td>RP003</td>
-                  <td>Injectores</td>
-                  <td>...</td>
-                  <td>6</td>
+                  <td>RP001</td>
+                  <td>Retenedores</td>
+                  <td>....</td>
                   <td>..</td>
-                  <td>$ 28.023</td>
-                  <td>$ 123.000</td>
+                  <td>$ 230.000</td>
+                  <td>$ 350.000</td>
+                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
+                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
+                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
+                  <td>4</td>
+                  <td><span class="badge badge-danger">No disponible</span></td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
                 <tr>
-                  <td>RP004</td>
+                  <td>RP001</td>
+                  <td>Motor</td>
+                  <td>....</td>
+                  <td>..</td>
+                  <td>$ 230.000</td>
+                  <td>$ 350.000</td>
+                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
+                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
+                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
+                  <td>4</td>
+                  <td><span class="badge badge-success">Disponible</span></td>
+                  <td>
+                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                        class="icon ion-md-create"></i></a>
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
+                        class="icon ion-md-trash"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>RP001</td>
+                  <td>Espejos</td>
+                  <td>....</td>
+                  <td>..</td>
+                  <td>$ 230.000</td>
+                  <td>$ 350.000</td>
+                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
+                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
+                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
+                  <td>4</td>
+                  <td><span class="badge badge-warning">Stock bajo</span></td>
+                  <td>
+                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                        class="icon ion-md-create"></i></a>
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
+                        class="icon ion-md-trash"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>RP001</td>
+                  <td>Neumáticos</td>
+                  <td>....</td>
+                  <td>..</td>
+                  <td>$ 230.000</td>
+                  <td>$ 350.000</td>
+                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
+                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
+                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
+                  <td>4</td>
+                  <td><span class="badge badge-danger">No disponible</span></td>
+                  <td>
+                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                        class="icon ion-md-create"></i></a>
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
+                        class="icon ion-md-trash"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>RP001</td>
+                  <td>Retenedores</td>
+                  <td>....</td>
+                  <td>..</td>
+                  <td>$ 230.000</td>
+                  <td>$ 350.000</td>
+                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
+                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
+                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
+                  <td>4</td>
+                  <td><span class="badge badge-success">Disponible</span></td>
+                  <td>
+                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                        class="icon ion-md-create"></i></a>
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
+                        class="icon ion-md-trash"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>RP001</td>
                   <td>Bomba</td>
-                  <td>...</td>
-                  <td>1</td>
-                  <td>..</td>
-                  <td>$ 75.016</td>
-                  <td>$ 345.000</td>
-                  <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>RP005</td>
-                  <td>Retrovisor</td>
-                  <td>..</td>
-                  <td>2</td>
-                  <td>..</td>
-                  <td>$ 101.000</td>
-                  <td>$ 200.000</td>
-                  <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>RP005</td>
-                  <td>Retrovisor</td>
-                  <td>...</td>
-                  <td>2</td>
-                  <td>..</td>
-                  <td>$ 101.000</td>
-                  <td>$ 250.000</td>
-                  <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>RP003</td>
-                  <td>Injectores</td>
-                  <td>..</td>
-                  <td>6</td>
-                  <td>..</td>
-                  <td>$ 28.023</td>
-                  <td>$ 345.000</td>
-                  <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>RP001</td>
-                  <td>Retenedores</td>
-                  <td>...</td>
-                  <td>4</td>
+                  <td>....</td>
                   <td>..</td>
                   <td>$ 230.000</td>
-                  <td>$ 570.000</td>
+                  <td>$ 350.000</td>
+                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
+                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
+                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
+                  <td>4</td>
+                  <td><span class="badge badge-warning">Stock bajo</span></td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
-
                 <tr>
                   <td>RP001</td>
-                  <td>Retenedores</td>
-                  <td>..</td>
-                  <td>4</td>
-                  <td>..</td>
-                  <td>$ 230.000</td>
-                  <td>$ 456.000</td>
-                  <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>RP002</td>
-                  <td>Llantas</td>
-                  <td>..</td>
-                  <td>2</td>
-                  <td>..</td>
-                  <td>$ 420.000</td>
-                  <td>$ 840.000</td>
-                  <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>RP003</td>
-                  <td>Injectores</td>
-                  <td>..</td>
-                  <td>6</td>
-                  <td>..</td>
-                  <td>$ 28.023</td>
-                  <td>$ 213.000</td>
-                  <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>RP004</td>
-                  <td>Bomba</td>
-                  <td>...</td>
-                  <td>1</td>
-                  <td>..</td>
-                  <td>$ 75.016</td>
-                  <td>$ 85.000</td>
-                  <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>RP001</td>
-                  <td>Retenedores</td>
-                  <td>..</td>
-                  <td>4</td>
+                  <td>Parachoques</td>
+                  <td>....</td>
                   <td>..</td>
                   <td>$ 230.000</td>
-                  <td>$ 543.000</td>
+                  <td>$ 350.000</td>
+                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
+                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
+                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
+                  <td>4</td>
+                  <td><span class="badge badge-danger">No disponible</span></td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>RP002</td>
-                  <td>Llantas</td>
-                  <td>..</td>
-                  <td>2</td>
-                  <td>..</td>
-                  <td>$ 420.000</td>
-                  <td>$ 840.000</td>
-                  <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>RP003</td>
-                  <td>Injectores</td>
-                  <td>...</td>
-                  <td>6</td>
-                  <td>..</td>
-                  <td>$ 28.023</td>
-                  <td>$ 86.000</td>
-                  <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>

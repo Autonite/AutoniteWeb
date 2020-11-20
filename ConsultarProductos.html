@@ -97,6 +97,103 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="modal-table" data-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-light">
+                        <h5 class="modal-title font-weight-bold">Proveedores</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover text-center">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Documento</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Apellido</th>
+                                        <th scope="col">Teléfono</th>
+                                        <th scope="col">Empresa</th>
+                                        <th scope="col">Dirección empresa</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>001</td>
+                                        <td>1005732334</td>
+                                        <td>Diana</td>
+                                        <td>Puyol</td>
+                                        <td>3202020356</td>
+                                        <td>Llantas inc.</td>
+                                        <td>Cra 128 #54-23</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>001</td>
+                                        <td>1005732334</td>
+                                        <td>Diana</td>
+                                        <td>Puyol</td>
+                                        <td>3202020356</td>
+                                        <td>Llantas inc.</td>
+                                        <td>Cra 128 #54-23</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>001</td>
+                                        <td>1005732334</td>
+                                        <td>Diana</td>
+                                        <td>Puyol</td>
+                                        <td>3202020356</td>
+                                        <td>Llantas inc.</td>
+                                        <td>Cra 128 #54-23</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>001</td>
+                                        <td>1005732334</td>
+                                        <td>Diana</td>
+                                        <td>Puyol</td>
+                                        <td>3202020356</td>
+                                        <td>Llantas inc.</td>
+                                        <td>Cra 128 #54-23</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>001</td>
+                                        <td>1005732334</td>
+                                        <td>Diana</td>
+                                        <td>Puyol</td>
+                                        <td>3202020356</td>
+                                        <td>Llantas inc.</td>
+                                        <td>Cra 128 #54-23</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td>001</td>
+                                        <td>1005732334</td>
+                                        <td>Diana</td>
+                                        <td>Puyol</td>
+                                        <td>3202020356</td>
+                                        <td>Llantas inc.</td>
+                                        <td>Cra 128 #54-23</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <button type="button" class="btn btn-dark hover-dark" data-dismiss="modal">
+                            Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Fin MODALS -->
         <!-- Inicio SIDEBAR -->
         <div class="sidebar-div">
@@ -175,14 +272,14 @@
                             </a>
                             <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                                 <li>
-                                    <a href="ConsultarUsuarios.html"><i
+                                    <a href="ConsultarEmpleados.html"><i
                                             class="icon ion-md-radio-button-off"></i>Consultar
-                                        usuarios</a>
+                                        empleados</a>
                                 </li>
                                 <li>
-                                    <a href="ModificarContratos.html"><i
-                                            class="icon ion-md-radio-button-off"></i>Modificar
-                                        contratos</a>
+                                    <a href="ConsultarClientes.html"><i
+                                            class="icon ion-md-radio-button-off"></i>Consultar
+                                        clientes</a>
                                 </li>
                                 <li>
                                     <a href="AusenciasPermisos.html"><i
@@ -262,12 +359,12 @@
                                     <td>$ 230.000</td>
                                     <td>$ 350.000</td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconblue" title="Consultar" data-toggle="tooltip"><i
-                                                class="icon ion-md-eye"></i></a>
+                                        <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconblue"
+                                            title="Proveedores"><i class="icon ion-md-eye"></i></a>
                                     </td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar"
-                                            data-toggle="tooltip"><i class="icon ion-md-create"></i></a>
+                                        <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                                                class="icon ion-md-create"></i></a>
                                         <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                                                 class="icon ion-md-trash"></i></a>
                                     </td>
@@ -280,12 +377,12 @@
                                     <td>$ 420.000</td>
                                     <td>$ 540.000</td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconblue" title="Consultar" data-toggle="tooltip"><i
-                                                class="icon ion-md-eye"></i></a>
+                                        <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconblue"
+                                            title="Proveedores"><i class="icon ion-md-eye"></i></a>
                                     </td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar"
-                                            data-toggle="tooltip"><i class="icon ion-md-create"></i></a>
+                                        <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                                                class="icon ion-md-create"></i></a>
                                         <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                                                 class="icon ion-md-trash"></i></a>
                                     </td>
@@ -298,12 +395,12 @@
                                     <td>$ 28.023</td>
                                     <td>$ 123.000</td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconblue" title="Consultar" data-toggle="tooltip"><i
-                                                class="icon ion-md-eye"></i></a>
+                                        <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconblue"
+                                            title="Proveedores"><i class="icon ion-md-eye"></i></a>
                                     </td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar"
-                                            data-toggle="tooltip"><i class="icon ion-md-create"></i></a>
+                                        <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                                                class="icon ion-md-create"></i></a>
                                         <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                                                 class="icon ion-md-trash"></i></a>
                                     </td>
@@ -316,12 +413,12 @@
                                     <td>$ 75.016</td>
                                     <td>$ 345.000</td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconblue" title="Consultar" data-toggle="tooltip"><i
-                                                class="icon ion-md-eye"></i></a>
+                                        <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconblue"
+                                            title="Proveedores"><i class="icon ion-md-eye"></i></a>
                                     </td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar"
-                                            data-toggle="tooltip"><i class="icon ion-md-create"></i></a>
+                                        <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                                                class="icon ion-md-create"></i></a>
                                         <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                                                 class="icon ion-md-trash"></i></a>
                                     </td>
@@ -334,12 +431,12 @@
                                     <td>$ 101.000</td>
                                     <td>$ 200.000</td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconblue" title="Consultar" data-toggle="tooltip"><i
-                                                class="icon ion-md-eye"></i></a>
+                                        <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconblue"
+                                            title="Proveedores"><i class="icon ion-md-eye"></i></a>
                                     </td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar"
-                                            data-toggle="tooltip"><i class="icon ion-md-create"></i></a>
+                                        <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                                                class="icon ion-md-create"></i></a>
                                         <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                                                 class="icon ion-md-trash"></i></a>
                                     </td>
@@ -353,12 +450,12 @@
                                     <td>$ 101.000</td>
                                     <td>$ 250.000</td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconblue" title="Consultar" data-toggle="tooltip"><i
-                                                class="icon ion-md-eye"></i></a>
+                                        <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconblue"
+                                            title="Proveedores"><i class="icon ion-md-eye"></i></a>
                                     </td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar"
-                                            data-toggle="tooltip"><i class="icon ion-md-create"></i></a>
+                                        <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                                                class="icon ion-md-create"></i></a>
                                         <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                                                 class="icon ion-md-trash"></i></a>
                                     </td>
@@ -372,12 +469,12 @@
                                     <td>$ 28.023</td>
                                     <td>$ 345.000</td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconblue" title="Consultar" data-toggle="tooltip"><i
-                                                class="icon ion-md-eye"></i></a>
+                                        <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconblue"
+                                            title="Proveedores"><i class="icon ion-md-eye"></i></a>
                                     </td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar"
-                                            data-toggle="tooltip"><i class="icon ion-md-create"></i></a>
+                                        <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                                                class="icon ion-md-create"></i></a>
                                         <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                                                 class="icon ion-md-trash"></i></a>
                                     </td>
@@ -391,12 +488,12 @@
                                     <td>$ 230.000</td>
                                     <td>$ 570.000</td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconblue" title="Consultar" data-toggle="tooltip"><i
-                                                class="icon ion-md-eye"></i></a>
+                                        <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconblue"
+                                            title="Proveedores"><i class="icon ion-md-eye"></i></a>
                                     </td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar"
-                                            data-toggle="tooltip"><i class="icon ion-md-create"></i></a>
+                                        <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                                                class="icon ion-md-create"></i></a>
                                         <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                                                 class="icon ion-md-trash"></i></a>
                                     </td>
@@ -410,12 +507,12 @@
                                     <td>$ 230.000</td>
                                     <td>$ 456.000</td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconblue" title="Consultar" data-toggle="tooltip"><i
-                                                class="icon ion-md-eye"></i></a>
+                                        <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconblue"
+                                            title="Proveedores"><i class="icon ion-md-eye"></i></a>
                                     </td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar"
-                                            data-toggle="tooltip"><i class="icon ion-md-create"></i></a>
+                                        <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                                                class="icon ion-md-create"></i></a>
                                         <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                                                 class="icon ion-md-trash"></i></a>
                                     </td>
@@ -429,12 +526,12 @@
                                     <td>$ 420.000</td>
                                     <td>$ 840.000</td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconblue" title="Consultar" data-toggle="tooltip"><i
-                                                class="icon ion-md-eye"></i></a>
+                                        <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconblue"
+                                            title="Proveedores"><i class="icon ion-md-eye"></i></a>
                                     </td>
                                     <td>
-                                        <a href="#" class="mx-2 h5 iconyellow" title="iconyellowar"
-                                            data-toggle="tooltip"><i class="icon ion-md-create"></i></a>
+                                        <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                                                class="icon ion-md-create"></i></a>
                                         <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                                                 class="icon ion-md-trash"></i></a>
                                     </td>

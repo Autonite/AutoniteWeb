@@ -165,12 +165,12 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                 <li>
-                  <a href="ConsultarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Consultar
-                    usuarios</a>
+                  <a href="ConsultarEmpleados.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    empleados</a>
                 </li>
                 <li>
-                  <a href="ModificarContratos.html"><i class="icon ion-md-radio-button-off"></i>Modificar
-                    contratos</a>
+                  <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    clientes</a>
                 </li>
                 <li>
                   <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
@@ -193,83 +193,89 @@
           <li class="ml-auto breadcrumb-item">
             <a href="Dashboard.html"><i class="icon ion-md-home px-1"></i>Inicio</a>
           </li>
-          <li class="breadcrumb-item"><a href="#">Pagina anterior</a></li>
-          <li class="breadcrumb-item active">Pagina activa</li>
+          <li class="breadcrumb-item"><a href="ConsultarProveedores.html">Consultar proveedores</a></li>
+          <li class="breadcrumb-item active">Registrar proveedor</li>
         </ol>
         <hr class="m-0 p-0" />
       </nav>
       <form class="form-registro" onsubmit="return validar();">
-      <!-- Fin BREADCRUMB -->
-      <div id="page">
-        <!-- Inicio CONTENIDO PAGINA -->
-        <div class="card" id="forms">
-          <div class="card-header">Registrar proveedor</div>
-          <div class="card-body">
-            <form>
-              <div class="form-group">
-                <label>Documento</label>
-                <input type="text" id="Documento" class="form-control" placeholder="Ingresa el documento del cliente..."  />
-              </div>
+        <!-- Fin BREADCRUMB -->
+        <div id="page">
+          <!-- Inicio CONTENIDO PAGINA -->
+          <div class="card" id="forms">
+            <div class="card-header">Registrar proveedor</div>
+            <div class="card-body">
+              <form onsubmit="return valProveedor()">
+                <div class="form-group">
+                  <label>Documento</label>
+                  <input type="text" id="Documento" class="form-control"
+                    placeholder="Ingresa el documento del cliente..." />
+                </div>
 
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label>Nombre </label>
-                  <input type="text" min="0.00" id="Nombre" class="form-control" placeholder="Ingresa el Nombre..."  />
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label>Nombre </label>
+                    <input type="text" min="0.00" id="nombre" class="form-control" placeholder="Ingresa el Nombre..." />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Apellido</label>
+                    <input type="text" id="apellido" class="form-control" placeholder="Ingresa el apellido..." />
+                  </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label>Apellido</label>
-                  <input type="text" id="Apellido" class="form-control" placeholder="Ingresa el apellido..."  />
-                </div>
-              </div>
 
-              <div class="form-group">
-                <label>Dirección empresa</label>
-                <input type="text" id="Dempresa"min="0.00"  class="form-control" placeholder="Ingresa la dirección de la empresa..."
-                   />
-              </div>
+                <div class="form-group">
+                  <label>Dirección empresa</label>
+                  <input type="text" id="direccion" min="0.00" class="form-control"
+                    placeholder="Ingresa la dirección de la empresa..." />
+                </div>
 
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label>Telefono</label>
-                  <input type="tel" min="0.00" id="Telefono" class="form-control" placeholder="Ingresa el telefono..."  />
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label>Telefono</label>
+                    <input type="tel" min="0.00" id="telefono" class="form-control"
+                      placeholder="Ingresa el telefono..." />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Nombre de empresa</label>
+                    <input type="text" id="empresa" class="form-control"
+                      placeholder="Ingresa el nombre de la empresa..." />
+                  </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label>Nombre de empresa</label>
-                  <input type="text" id="Nempresa" class="form-control" placeholder="Ingresa el nombre de la empresa..."  />
+                <div class="form-group">
+                  <label>Productos</label>
+                  <select id="producto" multiple class="form-control">
+                    <option>Neumáticos</option>
+                    <option>Espejos</option>
+                    <option>Motores</option>
+                    <option>Bombas</option>
+                    <option>Injectores</option>
+                  </select>
                 </div>
+              </form>
+            </div>
+            <div class="card-footer">
+              <!-- col-sm-1 col-xs-1 col-md-1 col-lg-1 -->
+              <div class="text-right">
+                <a href="ConsultarProveedores.html"><button type="button" class="btn btn-danger md-4 hover-dark">
+                    Cancelar
+                  </button></a>
+                <a href="#ConsultarProveedores.html"><button type="submit" onclick="valProveedor();"
+                    class="btn btn-primary md-4 hover-dark">
+                    Guardar
+                  </button></a>
               </div>
-              <div class="form-group">
-                <label>Productos</label>
-                <select multiple class="form-control">
-                  <option>Neumáticos</option>
-                  <option>Espejos</option>
-                  <option>Motores</option>
-                  <option>Bombas</option>
-                  <option>Injectores</option>
-                </select>
-              </div>
-            </form>
-          </div>
-          <div class="card-footer">
-            <!-- col-sm-1 col-xs-1 col-md-1 col-lg-1 -->
-            <div class="text-right">
-              <a href="Dashboard.html"><button type="button" class="btn btn-danger md-4 hover-dark">
-                  Cancelar
-                </button></a>
-              <a href="ConsultarProveedores.html"><button type="submit" class="btn btn-primary md-4 hover-dark">
-                  Guardar
-                </button></a>
             </div>
           </div>
+          <!-- Fin CONTENIDO PAGINA -->
         </div>
-        <!-- Fin CONTENIDO PAGINA -->
-      </div>
 
-      <!-- Fin CONTENIDO -->
+        <!-- Fin CONTENIDO -->
     </div>
   </div>
   <!-- Scripts Javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="js/main.js"></script>
+  <script src="js/validaciones.js"></script>
   <!-- Bootstrap JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -277,8 +283,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
-    
-    <script src="js/RProveedor.js"></script>
 </body>
 
 </html>

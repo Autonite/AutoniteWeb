@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="icon" href="img/logo.png" />
-  <title>Usuarios | Autonite</title>
+  <title>Empleados | Autonite</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -168,12 +168,11 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                 <li>
-                  <a href="ConsultarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Consultar
-                    usuarios</a>
+                  <a href="ConsultarEmpleados.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    empleados</a>
                 </li>
                 <li>
-                  <a href="ModificarContratos.html"><i class="icon ion-md-radio-button-off"></i>Modificar
-                    contratos</a>
+                  <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar clientes</a>
                 </li>
                 <li>
                   <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
@@ -192,27 +191,22 @@
     <div id="content">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb align-items-center">
-          <h2 class="font-weight-bold m-0 p-0">» Consultar usuarios</h2>
+          <h2 class="font-weight-bold m-0 p-0">» Consultar empleados</h2>
           <li class="ml-auto breadcrumb-item">
             <a href="Dashboard.html"><i class="icon ion-md-home px-1"></i>Inicio</a>
           </li>
 
-          <li class="breadcrumb-item active">Consultar usuarios</li>
+          <li class="breadcrumb-item active">Consultar empleados</li>
         </ol>
         <hr class="m-0 p-0" />
       </nav>
       <!-- Fin BREADCRUMB -->
       <div id="page">
         <!-- Inicio CONTENIDO PAGINA -->
-
         <div class="table-options mb-3">
           <a href="RegistrarEmpleado.html"><button class="btn btn-primary hover-dark">
               Registrar empleado
             </button></a>
-
-
-
-
           <div class="search-box">
             <i class="icon ion-md-search"></i>
             <input type="text" class="form-control" placeholder="Buscar" />
@@ -238,8 +232,8 @@
                   <th>Documento</th>
                   <th>Nombre</th>
                   <th>Apellido</th>
-                  <th>Teléfono</th>
                   <th>Edad</th>
+                  <th>Teléfono</th>
                   <th>Dirección</th>
                   <th>Correo</th>
                   <th>Cargo</th>
@@ -252,12 +246,12 @@
                   <td>1000460114</td>
                   <td>Juan Alejandro</td>
                   <td>Gonzales Ortiz</td>
-                  <td>3108202478</td>
                   <td>28</td>
+                  <td>3108202478</td>
                   <td>kr 125d #40</td>
                   <td>juangonza123@gmail.com</td>
                   <td>Jefe de mecánicos</td>
-                  <td></td>
+                  <td><span class="badge badge-success">Disponible</span></td>
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Contratos"><i
                         class="icon ion-md-list-box"></i></a>
@@ -273,12 +267,12 @@
                   <td>1045478995</td>
                   <td>Rosa</td>
                   <td>Machado</td>
+                  <td>29</td>
                   <td>310549412</td>
-                  <td>20</td>
                   <td>kr 27a #7</td>
                   <td>rosa2@hotmail.com</td>
                   <td>Secretaría</td>
-                  <td></td>
+                  <td><span class="badge badge-danger">Asignado</span></td>
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Contratos"><i
                         class="icon ion-md-list-box"></i></a>
@@ -294,12 +288,12 @@
                   <td>125874112</td>
                   <td>Sebastian</td>
                   <td>Lizca</td>
-                  <td>3208200427</td>
                   <td>30</td>
+                  <td>3208200427</td>
                   <td>kr 9b #59</td>
                   <td>Ls2005@hotmail.com</td>
                   <td>Mecánico</td>
-                  <td></td>
+                  <td><span class="badge badge-warning">Ausente</span></td>
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Contratos"><i
                         class="icon ion-md-list-box"></i></a>
@@ -315,12 +309,12 @@
                   <td>9874125478</td>
                   <td>Carlos</td>
                   <td>Mejia</td>
+                  <td>13</td>
                   <td>3012582578</td>
-                  <td>19</td>
                   <td>kr 130h #14</td>
                   <td>...</td>
                   <td>Mecánico</td>
-                  <td></td>
+                  <td><span class="badge badge-secondary">Inactivo</span></td>
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Contratos"><i
                         class="icon ion-md-list-box"></i></a>
@@ -333,79 +327,15 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>1000460890</td>
-                  <td>Luis</td>
-                  <td>Perez</td>
-                  <td>3112608644</td>
-                  <td>40</td>
-                  <td>kr 140d #25</td>
-                  <td>yohss@gmail.com</td>
-                  <td>Administrador</td>
-                  <td></td>
-                  <td>
-                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Contratos"><i
-                        class="icon ion-md-list-box"></i></a>
-                    <a href="#" class="mx-1 h5 icongreen" title="Horarios" data-toggle="tooltip"><i
-                        class="icon ion-md-calendar"></i></a>
-                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconyellow" title="Servicios"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>1025461258</td>
-                  <td>Alfonso</td>
-                  <td>Diaz</td>
-                  <td>3205412697</td>
-                  <td>22</td>
-                  <td>kr 80c #20</td>
-                  <td>...</td>
-                  <td>Mecánico</td>
-                  <td></td>
-                  <td>
-                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Contratos"><i
-                        class="icon ion-md-list-box"></i></a>
-                    <a href="#" class="mx-1 h5 icongreen" title="Horarios" data-toggle="tooltip"><i
-                        class="icon ion-md-calendar"></i></a>
-                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconyellow" title="Servicios"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1078987456</td>
-                  <td>Ricardo</td>
-                  <td>Arias</td>
-                  <td>3205414456</td>
-                  <td>31</td>
-                  <td>kr 80c #40</td>
-                  <td>Ricta@gmail.com</td>
-                  <td>Mecánico</td>
-                  <td></td>
-                  <td>
-                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Contratos"><i
-                        class="icon ion-md-list-box"></i></a>
-                    <a href="#" class="mx-1 h5 icongreen" title="Horarios" data-toggle="tooltip"><i
-                        class="icon ion-md-calendar"></i></a>
-                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconyellow" title="Servicios"><i
-                        class="icon ion-md-create"></i></a>
-                    <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                        class="icon ion-md-trash"></i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1025478412</td>
-                  <td>Camilo</td>
-                  <td>Torres</td>
-                  <td>3205874125</td>
+                  <td>1000460114</td>
+                  <td>Juan Alejandro</td>
+                  <td>Gonzales Ortiz</td>
                   <td>19</td>
-                  <td>kr 170e #50</td>
-                  <td>...</td>
-                  <td>Mecánico</td>
-                  <td></td>
+                  <td>3108202478</td>
+                  <td>kr 125d #40</td>
+                  <td>juangonza123@gmail.com</td>
+                  <td>Jefe de mecánicos</td>
+                  <td><span class="badge badge-success">Disponible</span></td>
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Contratos"><i
                         class="icon ion-md-list-box"></i></a>
@@ -418,15 +348,57 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>1456789123</td>
-                  <td>Andres</td>
-                  <td>Rodriguez</td>
-                  <td>3015412741</td>
+                  <td>1045478995</td>
+                  <td>Rosa</td>
+                  <td>Machado</td>
                   <td>20</td>
-                  <td>kr 6c #20</td>
-                  <td>...</td>
+                  <td>3137524278</td>
+                  <td>kr 27a #7</td>
+                  <td>rosa2@hotmail.com</td>
+                  <td>Secretaría</td>
+                  <td><span class="badge badge-danger">Asignado</span></td>
+                  <td>
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Contratos"><i
+                        class="icon ion-md-list-box"></i></a>
+                    <a href="#" class="mx-1 h5 icongreen" title="Horarios" data-toggle="tooltip"><i
+                        class="icon ion-md-calendar"></i></a>
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconyellow" title="Servicios"><i
+                        class="icon ion-md-create"></i></a>
+                    <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
+                        class="icon ion-md-trash"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>125874112</td>
+                  <td>Sebastian</td>
+                  <td>Lizca</td>
+                  <td>30</td>
+                  <td>3208200427</td>
+                  <td>kr 9b #59</td>
+                  <td>Ls2005@hotmail.com</td>
                   <td>Mecánico</td>
-                  <td></td>
+                  <td><span class="badge badge-warning">Ausente</span></td>
+                  <td>
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Contratos"><i
+                        class="icon ion-md-list-box"></i></a>
+                    <a href="#" class="mx-1 h5 icongreen" title="Horarios" data-toggle="tooltip"><i
+                        class="icon ion-md-calendar"></i></a>
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconyellow" title="Servicios"><i
+                        class="icon ion-md-create"></i></a>
+                    <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
+                        class="icon ion-md-trash"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>9874125478</td>
+                  <td>Carlos</td>
+                  <td>Mejia</td>
+                  <td>23</td>
+                  <td>3012582578</td>
+                  <td>kr 130h #14</td>
+                  <td>...</td>
+                  <td>Administrador</td>
+                  <td><span class="badge badge-secondary">Inactivo</span></td>
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Contratos"><i
                         class="icon ion-md-list-box"></i></a>
@@ -469,188 +441,6 @@
               <a href="#" class="page-link"><i class="icon ion-md-fastforward"></i></a>
             </li>
           </ul>
-        </div>
-
-        <!--Consultar cliente-->
-
-        <div id="cliente">
-          <!-- Inicio CONTENIDO PAGINA -->
-          <div class="table-options mb-3">
-            <a href="RegistrarCliente.html"><button class="btn btn-primary hover-dark">
-                Registrar cliente</button></a>
-            <div class="search-box">
-
-              <i class="icon ion-md-search"></i>
-              <input type="text" class="form-control" placeholder="Buscar" />
-            </div>
-          </div>
-          <div class="table-responsive">
-            <div class="table-wrapper">
-              <table class="table table-striped table-hover table-bordered order-table text-center">
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Teléfono</th>
-                    <th>Dirección</th>
-
-
-                    <th>Funciones</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>RFC0114</td>
-                    <td>Pedro</td>
-                    <td>Severiche</td>
-                    <td>3108202478</td>
-                    <td>kr 125d #40</td>
-                    <td>
-                      <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow" title="Servicios"><i
-                          class="icon ion-md-create"></i></a>
-                      <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                          class="icon ion-md-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>RFC8995</td>
-                    <td>Ronal</td>
-                    <td>Meza</td>
-                    <td>310549412</td>
-                    <td>kr 27a #7</td>
-                    <td>
-                      <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow" title="Servicios"><i
-                          class="icon ion-md-create"></i></a>
-                      <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                          class="icon ion-md-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>RFC4112</td>
-                    <td>Matteo</td>
-                    <td>Arrieta</td>
-                    <td>3208200427</td>
-                    <td>kr 9b #59</td>
-                    <td>
-                      <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow" title="Servicios"><i
-                          class="icon ion-md-create"></i></a>
-                      <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                          class="icon ion-md-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>RFC5478</td>
-                    <td>Carlos</td>
-                    <td>Machado</td>
-                    <td>3012582578</td>
-                    <td>kr 130h #14</td>
-                    <td>
-                      <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow" title="Servicios"><i
-                          class="icon ion-md-create"></i></a>
-                      <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                          class="icon ion-md-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>RFC0890</td>
-                    <td>Luisa</td>
-                    <td>Dávila</td>
-                    <td>3112608644</td>
-                    <td>kr 140d #25</td>
-                    <td>
-                      <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow" title="Servicios"><i
-                          class="icon ion-md-create"></i></a>
-                      <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                          class="icon ion-md-trash"></i></a>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>RFC1258</td>
-                    <td>Alonso</td>
-                    <td>Marquez</td>
-                    <td>3205412697</td>
-                    <td>kr 80c #20</td>
-                    <td>
-                      <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow" title="Servicios"><i
-                          class="icon ion-md-create"></i></a>
-                      <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                          class="icon ion-md-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>RFC7456</td>
-                    <td>Renaldis</td>
-                    <td>Morales</td>
-                    <td>3205414456</td>
-                    <td>kr 80c #40</td>
-                    <td>
-                      <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow" title="Servicios"><i
-                          class="icon ion-md-create"></i></a>
-                      <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                          class="icon ion-md-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>RFC8412</td>
-                    <td>Camila</td>
-                    <td>Torres</td>
-                    <td>3205874125</td>
-                    <td>kr 170e #50</td>
-                    <td>
-                      <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow" title="Servicios"><i
-                          class="icon ion-md-create"></i></a>
-                      <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                          class="icon ion-md-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>RFC9123</td>
-                    <td>Andreson</td>
-                    <td>Rodriguez</td>
-                    <td>3015412741</td>
-                    <td>kr 6c #20</td>
-                    <td>
-                      <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow" title="Servicios"><i
-                          class="icon ion-md-create"></i></a>
-                      <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                          class="icon ion-md-trash"></i></a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="clearfix">
-            <div class="hint-text">
-              Mostrando <b>15</b> de <b>25</b> registros
-            </div>
-            <ul class="pagination">
-              <li class="page-item disabled">
-                <a href="#"><i class="icon ion-md-rewind"></i></a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link">1</a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link">2</a>
-              </li>
-              <li class="page-item active">
-                <a href="#" class="page-link">3</a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link">4</a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link">5</a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link"><i class="icon ion-md-fastforward"></i></a>
-              </li>
-            </ul>
-          </div>
-          <!-- Fin CONTENIDO PAGINA -->
         </div>
       </div>
       <!-- Fin CONTENIDO -->

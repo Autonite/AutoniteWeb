@@ -168,12 +168,12 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                 <li>
-                  <a href="ConsultarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Consultar
-                    usuarios</a>
+                  <a href="ConsultarEmpleados.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    empleados</a>
                 </li>
                 <li>
-                  <a href="ModificarContratos.html"><i class="icon ion-md-radio-button-off"></i>Modificar
-                    contratos</a>
+                  <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    clientes</a>
                 </li>
                 <li>
                   <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
@@ -204,7 +204,7 @@
             <a href="RegistrarCompras.html">Registrar compra</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="iconyellowarPedidos.html">iconyellowar pedidos</a>
+            <a href="EditarPedidos.html">Editar pedidos</a>
           </li>
           <li class="breadcrumb-item active">Registrar pedido</li>
         </ol>
@@ -216,11 +216,11 @@
         <div class="card" id="forms">
           <div class="card-header">Datos del pedido</div>
           <div class="card-body">
-            <form>
+            <form onsubmit="return valPedidos()">
               <div class="form-row">
                 <div class="form-group col-md-4">
                   <label>Producto</label>
-                  <select class="form-control">
+                  <select id="producto" class="form-control">
                     <option selected>Seleccionar...</option>
                     <option value="serv1">Motor</option>
                     <option value="serv2">Neumáticos</option>
@@ -229,7 +229,7 @@
                 </div>
                 <div class="form-group col-md-4">
                   <label>Proveedor</label>
-                  <select class="form-control">
+                  <select id="proveedor" class="form-control">
                     <option selected>Seleccionar...</option>
                     <option value="serv1">Juan</option>
                     <option value="serv2">Diana</option>
@@ -238,18 +238,19 @@
                 </div>
                 <div class="form-group col-md-4">
                   <label>Cantidad</label>
-                  <input type="number" min="0" class="form-control" placeholder="Ingresa la cantidad..." required />
+                  <input type="number" min="0" class="form-control" placeholder="Ingresa la cantidad..."
+                    id="cantidad" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>Hora pedido</label>
-                  <input type="time" min="0.00" class="form-control" required />
+                  <input type="time" min="0.00" class="form-control" id="hora" />
                 </div>
 
                 <div class="form-group col-md-6">
                   <label>Fecha pedido</label>
-                  <input type="date" class="form-control" required />
+                  <input type="date" class="form-control" id="fecha" />
                 </div>
               </div>
             </form>
@@ -257,10 +258,11 @@
 
           <div class="card-footer">
             <div class="text-right">
-              <a href="iconyellowarPedidos.html"><button type="button" class="btn btn-danger md-4 hover-dark">
+              <a href="EditarPedidos.html"><button type="button" class="btn btn-danger md-4 hover-dark">
                   Regresar
                 </button></a>
-              <a href="iconyellowarPedidos.html"><button type="submit" class="btn btn-primary md-4 hover-dark">
+              <a href="#EditarPedidos.html"><button type="submit" onclick="valPedidos();"
+                  class="btn btn-primary md-4 hover-dark">
                   Siguiente
                 </button></a>
             </div>
@@ -274,7 +276,9 @@
     <!-- Fin CONTENIDO -->
   </div>
   <!-- Scripts Javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="js/main.js"></script>
+  <script src="js/validaciones.js"></script>
   <!-- Bootstrap JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

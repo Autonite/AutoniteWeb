@@ -168,12 +168,12 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                 <li>
-                  <a href="ConsultarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Consultar
-                    usuarios</a>
+                  <a href="ConsultarEmpleados.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    empleados</a>
                 </li>
                 <li>
-                  <a href="ModificarContratos.html"><i class="icon ion-md-radio-button-off"></i>Modificar
-                    contratos</a>
+                  <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    clientes</a>
                 </li>
                 <li>
                   <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
@@ -197,7 +197,7 @@
             <a href="Dashboard.html"><i class="icon ion-md-home px-1"></i>Inicio</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="ConsultarUsuarios.html">Consultar usuarios</a>
+            <a href="ConsultarEmpleados.html">Consultar empleados</a>
           </li>
           <li class="breadcrumb-item active">Registrar empleados</li>
         </ol>
@@ -218,36 +218,36 @@
             </ul>
           </div>
           <div class="card-body">
-            <form>
+            <form onsubmit="return valEmpleado()">
               <div class="form-group">
                 <label>Documento de identidad</label>
                 <input type="number" min="0.00" class="form-control" placeholder="Ingresa el documento de identidad..."
-                  required />
+                  id="documento" />
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>Nombres</label>
-                  <input type="text" class="form-control" placeholder="Ingresa el nombre..." required />
+                  <input type="text" class="form-control" placeholder="Ingresa el nombre..." id="nombre" />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Apellidos</label>
-                  <input type="text" class="form-control" placeholder="Ingresa el apellido..." required />
+                  <input type="text" class="form-control" placeholder="Ingresa el apellido..." id="apellido" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-4">
                   <label>Teléfono</label>
                   <input type="tel" min="0" class="form-control" placeholder="Ingresa el número de teléfono..."
-                    required />
+                    id="telefono" />
                 </div>
                 <div class="form-group col-md-4">
                   <label>Edad</label>
                   <input type="number" min="0" max="150" class="form-control" placeholder="Ingresa la edad..."
-                    required />
+                    id="edad" />
                 </div>
                 <div class="form-group col-md-4">
                   <label>Cargo del empleado</label>
-                  <select class="form-control">
+                  <select id="cargo" class="form-control">
                     <option selected>Seleccionar...</option>
                     <option value="administrador">Administrador</option>
                     <option value="jefemecanicos">Jefe de mecánicos</option>
@@ -258,20 +258,21 @@
               </div>
               <div class="form-group">
                 <label>Dirección</label>
-                <input type="text" class="form-control" placeholder="Ingresa la dirección..." required />
+                <input type="text" class="form-control" placeholder="Ingresa la dirección..." id="direccion">
               </div>
               <div class="form-group">
                 <label>Correo eléctronico</label>
-                <input type="email" class="form-control" placeholder="Ingresa el correo eléctronico..." required />
+                <input type="email" class="form-control" placeholder="Ingresa el correo eléctronico..." id="correo" />
               </div>
             </form>
           </div>
           <div class="card-footer">
             <div class="text-right">
-              <a href="ConsultarUsuarios.html"><button type="submit" class="btn btn-danger md-4 hover-dark">
+              <a href="ConsultarEmpleados.html"><button type="submit" class="btn btn-danger md-4 hover-dark">
                   Cancelar
                 </button></a>
-              <a href="RegistrarEmpleadoContratos.html"><button type="submit" class="btn btn-primary md-4 hover-dark">
+              <a href="#RegistrarEmpleadoContratos.html"><button type="submit" onclick="valEmpleado();"
+                  class="btn btn-primary md-4 hover-dark">
                   Siguiente
                 </button></a>
             </div>
@@ -283,7 +284,9 @@
     <!-- Fin CONTENIDO -->
   </div>
   <!-- Scripts Javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="js/main.js"></script>
+  <script src="js/validaciones.js"></script>
   <!-- Bootstrap JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

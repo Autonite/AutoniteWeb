@@ -167,12 +167,12 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                 <li>
-                  <a href="ConsultarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Consultar
-                    usuarios</a>
+                  <a href="ConsultarEmpleados.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    empleados</a>
                 </li>
                 <li>
-                  <a href="ModificarContratos.html"><i class="icon ion-md-radio-button-off"></i>Modificar
-                    contratos</a>
+                  <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    clientes</a>
                 </li>
                 <li>
                   <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
@@ -196,7 +196,7 @@
             <a href="Dashboard.html"><i class="icon ion-md-home px-1"></i>Inicio</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="ConsultarUsuarios.html">Consultar usuarios</a>
+            <a href="ConsultarEmpleados.html">Consultar empleados</a>
           </li>
           <li class="breadcrumb-item active">Registrar empleados</li>
         </ol>
@@ -217,10 +217,10 @@
             </ul>
           </div>
           <div class="card-body">
-            <form>
+            <form onsubmit="return valContratos()">
               <div class="form-group">
                 <label>Tipo de contrato</label>
-                <select class="form-control">
+                <select id="tContrato" class="form-control">
                   <option selected>Seleccionar...</option>
                   <option value="A">Contrato a termino fijo</option>
                   <option value="B">Contrato indefinido</option>
@@ -231,23 +231,24 @@
                 <div class="form-group col-md-6">
                   <label>Inicio del contrato</label>
                   <input type="date" class="form-control" placeholder="Ingresa la fecha en la que inicia e..."
-                    required />
+                    id="iContrato" />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Fin del contrato</label>
                   <input type="date" class="form-control" placeholder="Ingresa la fecha del fin de contrato..."
-                    required />
+                    id="fContrato" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>Salario</label>
-                  <input type="number" min="0.00" class="form-control" placeholder="Ingresa el salario..." required />
+                  <input type="number" min="0.00" class="form-control" placeholder="Ingresa el salario..."
+                    id="salario" />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Duración jornada</label>
                   <input type="number" max="24" class="form-control" placeholder="Ingresa la duración de la jornada..."
-                    required />
+                    id="dJornada" />
                   <small class="form-text text-muted">Número de horas diarias</small>
                 </div>
               </div>
@@ -258,7 +259,8 @@
               <a href="RegistrarEmpleado.html"><button type="submit" class="btn btn-danger md-4 hover-dark">
                   Regresar
                 </button></a>
-              <a href="ConsultarUsuarios.html"><button type="submit" class="btn btn-primary md-4 hover-dark">
+              <a href="#ConsultarEmpleados.html"><button type="submit" onclick="valContratos();"
+                  class="btn btn-primary md-4 hover-dark">
                   Guardar
                 </button></a>
             </div>
@@ -270,7 +272,9 @@
     <!-- Fin CONTENIDO -->
   </div>
   <!-- Scripts Javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="js/main.js"></script>
+  <script src="js/validaciones.js"></script>
   <!-- Bootstrap JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

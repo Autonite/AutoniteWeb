@@ -100,7 +100,7 @@
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header bg-primary text-light">
-            <h5 class="modal-title font-weight-bold">Servicios realizados</h5>
+            <h5 class="modal-title font-weight-bold">Servicios agendados</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -133,6 +133,7 @@
                     <td>$30000</td>
                     <td>$7500</td>
                     <td>$37500</td>
+                    <td><span class="badge badge-warning">Pendiente</span></td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
@@ -144,6 +145,55 @@
                     <td>-</td>
                     <td>$27500</td>
                     <td>$27500</td>
+                    <td><span class="badge badge-primary">Asignado</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Lavado</td>
+                    <td>Lavado de carro</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>$27500</td>
+                    <td>$27500</td>
+                    <td><span class="badge badge-info">En proceso</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Lavado</td>
+                    <td>Lavado de carro</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>$27500</td>
+                    <td>$27500</td>
+                    <td><span class="badge badge-danger">Cancelado</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Lavado</td>
+                    <td>Lavado de carro</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>$27500</td>
+                    <td>$27500</td>
+                    <td><span class="badge badge-secondary">Finalizado</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Lavado</td>
+                    <td>Lavado de carro</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>$27500</td>
+                    <td>$27500</td>
+                    <td><span class="badge badge-success">Entregado</span></td>
                   </tr>
                 </tbody>
               </table>
@@ -229,12 +279,12 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                 <li>
-                  <a href="ConsultarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Consultar
-                    usuarios</a>
+                  <a href="ConsultarEmpleados.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    empleados</a>
                 </li>
                 <li>
-                  <a href="ModificarContratos.html"><i class="icon ion-md-radio-button-off"></i>Modificar
-                    contratos</a>
+                  <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    clientes</a>
                 </li>
                 <li>
                   <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
@@ -319,7 +369,7 @@
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
                         class="icon ion-md-eye"></i></a>
-                    <a href="#" class="mx-1 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
@@ -336,7 +386,7 @@
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
                         class="icon ion-md-eye"></i></a>
-                    <a href="#" class="mx-1 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
@@ -353,7 +403,7 @@
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
                         class="icon ion-md-eye"></i></a>
-                    <a href="#" class="mx-1 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
@@ -370,7 +420,7 @@
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
                         class="icon ion-md-eye"></i></a>
-                    <a href="#" class="mx-1 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
@@ -387,7 +437,7 @@
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
                         class="icon ion-md-eye"></i></a>
-                    <a href="#" class="mx-1 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
@@ -405,7 +455,7 @@
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
                         class="icon ion-md-eye"></i></a>
-                    <a href="#" class="mx-1 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
@@ -423,7 +473,7 @@
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
                         class="icon ion-md-eye"></i></a>
-                    <a href="#" class="mx-1 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
@@ -441,7 +491,7 @@
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
                         class="icon ion-md-eye"></i></a>
-                    <a href="#" class="mx-1 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
@@ -459,7 +509,7 @@
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
                         class="icon ion-md-eye"></i></a>
-                    <a href="#" class="mx-1 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>
@@ -477,7 +527,7 @@
                   <td>
                     <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
                         class="icon ion-md-eye"></i></a>
-                    <a href="#" class="mx-1 h5 iconyellow" title="iconyellowar" data-toggle="tooltip"><i
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-1 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
                         class="icon ion-md-trash"></i></a>

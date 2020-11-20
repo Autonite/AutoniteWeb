@@ -168,12 +168,12 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                 <li>
-                  <a href="ConsultarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Consultar
-                    usuarios</a>
+                  <a href="ConsultarEmpleados.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    empleados</a>
                 </li>
                 <li>
-                  <a href="ModificarContratos.html"><i class="icon ion-md-radio-button-off"></i>Modificar
-                    contratos</a>
+                  <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    clientes</a>
                 </li>
                 <li>
                   <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
@@ -210,26 +210,27 @@
         <div class="card" id="forms">
           <div class="card-header">Datos de compra</div>
           <div class="card-body">
-            <form>
+            <form onsubmit="return valCompra();">
               <div class="form-group">
                 <label>Documento comprador</label>
                 <input type="number" min="0.00" class="form-control" placeholder="Ingresa el documento del comprador..."
-                  required />
+                  id="documento" />
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>Fecha de realizado</label>
                   <input type="date" min="0.00" class="form-control" placeholder="Ingresa la fecha de realizado..."
-                    required />
+                    id="fRealizado" />
                 </div>
                 <div class="form-group col-md-6">
                   <label>Fecha de entrega</label>
-                  <input type="date" min="0.00" class="form-control" required />
+                  <input type="date" min="0.00" class="form-control" id="fEntrega" />
                 </div>
               </div>
               <div class="form-group">
                 <label>Descripción</label>
-                <textarea class="form-control" rows="2" placeholder="Ingresa la descripción..." required></textarea>
+                <textarea class="form-control" rows="2" placeholder="Ingresa la descripción..."
+                  id="descripcion"></textarea>
               </div>
             </form>
           </div>
@@ -238,7 +239,8 @@
               <a href="ComprasAgendadas.html"><button type="button" class="btn btn-danger md-4 hover-dark">
                   Cancelar
                 </button></a>
-              <a href="iconyellowarPedidos.html"><button type="submit" class="btn btn-primary md-4 hover-dark">
+              <a href="#EditarPedidos.html"><button type="submit" onclick="valCompra();"
+                  class="btn btn-primary md-4 hover-dark">
                   Siguiente
                 </button></a>
             </div>
@@ -250,7 +252,9 @@
   </div>
   <!-- Fin CONTENIDO -->
   <!-- Scripts Javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="js/main.js"></script>
+  <script src="js/validaciones.js"></script>
   <!-- Bootstrap JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

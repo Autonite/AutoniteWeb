@@ -168,12 +168,12 @@
               </a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-humana">
                 <li>
-                  <a href="ConsultarUsuarios.html"><i class="icon ion-md-radio-button-off"></i>Consultar
-                    usuarios</a>
+                  <a href="ConsultarEmpleados.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    empleados</a>
                 </li>
                 <li>
-                  <a href="ModificarContratos.html"><i class="icon ion-md-radio-button-off"></i>Modificar
-                    contratos</a>
+                  <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
+                    clientes</a>
                 </li>
                 <li>
                   <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
@@ -189,7 +189,7 @@
     <!-- Fin SIDEBAR  -->
     <!-- Inicio CONTENIDO -->
     <!-- Inicio BREADCRUMB -->
-    
+
     <div id="content">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb align-items-center">
@@ -206,58 +206,58 @@
         <hr class="m-0 p-0" />
       </nav>
       <form class="form-registro" onsubmit="return validar();">
-      <!-- Fin BREADCRUMB -->
-      <div id="page">
-        <!-- Inicio CONTENIDO PAGINA -->
-        <div class="card" id="forms">
-          <div class="card-header">Datos de venta</div>
-          <div class="card-body">
-            <form>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label>Documento vendedor</label>
-                  <input type="number" id="DocumentoV" name="DocumentoV" min="0.00" class="form-control"
-                    placeholder="Ingresa el documento del vendedor..."  />
+        <!-- Fin BREADCRUMB -->
+        <div id="page">
+          <!-- Inicio CONTENIDO PAGINA -->
+          <div class="card">
+            <div class="card-header">Datos de venta</div>
+            <div class="card-body">
+              <form onsubmit="return valVenta();">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label>Documento vendedor</label>
+                    <input type="number" id="dVendedor" min="0.00" class="form-control"
+                      placeholder="Ingresa el documento del vendedor..." />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label>Documento cliente</label>
+                    <input type="number" id="dCliente" min="0.00" class="form-control"
+                      placeholder="Ingresa el documento del cliente..." />
+                  </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label>Documento cliente</label>
-                  <input type="number" id="DocumentoC" name="DocumentoC" min="0.00" class="form-control"
-                    placeholder="Ingresa el documento del cliente..."  />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label>Hora venta</label>
-                  <input type="time" id="Hora" name="Hora" min="0.00" class="form-control" />
-                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label>Hora venta</label>
+                    <input type="time" id="hVenta" min="0.00" class="form-control" />
+                  </div>
 
-                <div class="form-group col-md-6">
-                  <label>Fecha venta</label>
-                  <input type="date" id="Fecha" name="Fecha" class="form-control" />
+                  <div class="form-group col-md-6">
+                    <label>Fecha venta</label>
+                    <input type="date" id="fVenta" class="form-control" />
+                  </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <label>Descripción</label>
-                <textarea class="form-control" id="Descripcion" name="Descripcion" rows="2" placeholder="Ingresa la descripción..."
-                ></textarea>
-              </div>
-            </form>
-          </div>
+                <div class="form-group">
+                  <label>Descripción</label>
+                  <textarea class="form-control" id="descripcion" rows="2"
+                    placeholder="Ingresa la descripción..."></textarea>
+                </div>
+              </form>
+            </div>
 
-          <div class="card-footer">
-            <div class="text-right">
-              <a href="VentasAgendadas.html"><button type="button" class="btn btn-danger md-4 hover-dark">
-                  Cancelar
-                </button></a>
-              <a href="iconyellowarServicios.html"><button type="submit" class="btn btn-primary md-4 hover-dark">
-                  Siguiente
-                </button></a>
+            <div class="card-footer">
+              <div class="text-right">
+                <a href="VentasAgendadas.html"><button type="button" class="btn btn-danger md-4 hover-dark">
+                    Cancelar
+                  </button></a>
+                <a href="EditarServicios.html"><button type="submit" class="btn btn-primary md-4 hover-dark">
+                    Siguiente
+                  </button></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Fin CONTENIDO PAGINA -->
+        <!-- Fin CONTENIDO PAGINA -->
     </div>
 
     <!-- Fin CONTENIDO -->
