@@ -14,10 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet" />
-
   <link href="css/adminstyles.css" rel="stylesheet" />
   <link href="css/formularios.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
 <body>
@@ -90,8 +88,8 @@
             </form>
           </div>
           <div class="modal-footer justify-content-center bg-light">
-            <button type="button" class="btn btn-dark" data-dismiss="modal">
-              Cancelar</button><button type="button" class="btn btn-primary">Confirmar</button>
+            <button type="button" class="btn btn-dark hover-dark" data-dismiss="modal">
+              Cancelar</button><button type="button" class="btn btn-primary hover-dark">Confirmar</button>
           </div>
         </div>
       </div>
@@ -211,54 +209,53 @@
         </ol>
         <hr class="m-0 p-0" />
       </nav>
-      <form class="form-registro" onsubmit="return validar();">
-        <!-- Fin BREADCRUMB -->
-        <div id="page">
-          <!-- Inicio CONTENIDO PAGINA -->
-          <div class="card" id="forms">
-            <div class="card-header">Datos del servicio</div>
-            <div class="card-body">
-              <form onsubmit=" return valServicio();">
+      <!-- Fin BREADCRUMB -->
+      <div id="page">
+        <!-- Inicio CONTENIDO PAGINA -->
+        <div class="card" id="forms">
+          <div class="card-header">Datos del servicio</div>
+          <div class="card-body">
+            <form onsubmit=" return valServicio();">
 
-                <div class="form-group">
-                  <label>Tipo de servicio</label>
-                  <select class="form-control">
-                    <option selected>Seleccionar...</option>
-                    <option value="serv1">Reparación de motor</option>
-                    <option value="serv2">Cambio de neumáticos</option>
-                    <option value="serv3">Cualquier otra cosa</option>
-                  </select>
+              <div class="form-group">
+                <label>Tipo de servicio</label>
+                <select id="tipo" class="form-control">
+                  <option selected>Seleccionar...</option>
+                  <option value="serv1">Reparación de motor</option>
+                  <option value="serv2">Cambio de neumáticos</option>
+                  <option value="serv3">Cualquier otra cosa</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Descripción</label>
+                <textarea class="form-control" id="descripcion" rows="2"
+                  placeholder="Ingresa la descripción..."></textarea>
+              </div>
+              <div class="form-group">
+                <label>Producto empleado</label>
+                <select id="producto" class="form-control">
+                  <option selected>Seleccionar...</option>
+                  <option value="serv3">Ninguno</option>
+                  <option value="serv1">Neumaticos</option>
+                  <option value="serv2">Motor</option>
+                  <option value="serv3">Espejos</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>Cantidad empleada</label>
+                  <input type="number" min="0" id="cantidad" class="form-control"
+                    placeholder="Ingresa la cantidad..." />
                 </div>
-                <div class="form-group">
-                  <label>Descripción</label>
-                  <textarea class="form-control" id="descripcion" rows="2"
-                    placeholder="Ingresa la descripción..."></textarea>
+                <div class="form-group col-md-6">
+                  <label>Valor del servicio</label>
+                  <input type="number" min="0.00" id="valor" class="form-control"
+                    placeholder="Ingresa el valor del servicio..." />
+                  <small class="form-text text-muted">Valor del servicio (sin el coste de los productos
+                    usados)</small>
                 </div>
-                <div class="form-group">
-                  <label>Producto empleado</label>
-                  <select class="form-control">
-                    <option selected>Seleccionar...</option>
-                    <option value="serv3">Ninguno</option>
-                    <option value="serv1">Neumaticos</option>
-                    <option value="serv2">Motor</option>
-                    <option value="serv3">Espejos</option>
-                  </select>
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label>Cantidad empleada</label>
-                    <input type="number" min="0" id="cantidad" class="form-control"
-                      placeholder="Ingresa la cantidad..." />
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label>Valor del servicio</label>
-                    <input type="number" min="0.00" id="vServicio" class="form-control"
-                      placeholder="Ingresa el valor del servicio..." />
-                    <small class="form-text text-muted">Valor del servicio (sin el coste de los productos
-                      usados)</small>
-                  </div>
-                </div>
-                <!-- <div class="form-row">
+              </div>
+              <!-- <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>Hora realizado</label>
                   <input type="time" min="0.00" class="form-control" required />
@@ -269,23 +266,24 @@
                   <input type="date" class="form-control" required />
                 </div>
               </div> -->
-              </form>
-            </div>
+            </form>
+          </div>
 
-            <div class="card-footer">
-              <div class="text-right">
-                <a href="EditarServicios.html"><button type="button" class="btn btn-danger md-4 hover-dark">
-                    Regresar
-                  </button></a>
-                <a href="EditarServicios.html"><button type="submit" class="btn btn-primary md-4 hover-dark">
-                    Siguiente
-                  </button></a>
-              </div>
+          <div class="card-footer">
+            <div class="text-right">
+              <a href="EditarServicios.html"><button type="button" class="btn btn-danger md-4 hover-dark">
+                  Regresar
+                </button></a>
+              <a href="#EditarServicios.html"><button type="submit" onclick="valServicio();"
+                  class="btn btn-primary md-4 hover-dark">
+                  Siguiente
+                </button></a>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Fin CONTENIDO PAGINA -->
+      <!-- Fin CONTENIDO PAGINA -->
     </div>
 
     <!-- Fin CONTENIDO -->

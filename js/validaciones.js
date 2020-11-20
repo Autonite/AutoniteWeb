@@ -1,3 +1,27 @@
+function Usuario() {
+  var usuario = document.getElementById("usuario").value;
+  if (usuario == 0) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Debes llenar el campo de usuario."
+    });
+    return false;
+  }
+}
+
+function Contrasena() {
+  var contrasena = document.getElementById("contrasena").value;
+  if (contrasena == 0) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Debes llenar el campo de contraseña."
+    });
+    return false;
+  }
+}
+
 function Documento() {
   var documento = document.getElementById("documento").value;
   if (documento == 0) {
@@ -10,6 +34,48 @@ function Documento() {
 
   }
   if (documento.length > 10 && documento.length < 6) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "El número de documento debe estár comprendido entre 6 - 10 dígitos."
+    });
+    return false;
+  }
+}
+
+function DocumentoVendedor() {
+  var dVendedor = document.getElementById("dVendedor").value;
+  if (dVendedor == 0) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Debes llenar el campo número de documento del vendedor."
+    });
+    return false;
+
+  }
+  if (dVendedor.length > 10 && dVendedor.length < 6) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "El número de documento debe estár comprendido entre 6 - 10 dígitos."
+    });
+    return false;
+  }
+}
+
+function DocumentoCliente() {
+  var dCliente = document.getElementById("dCliente").value;
+  if (dCliente == 0) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Debes llenar el campo número de documento del cliente."
+    });
+    return false;
+
+  }
+  if (dCliente.length > 10 && dCliente.length < 6) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
@@ -156,6 +222,18 @@ function Descripcion() {
   }
 }
 
+function Clasificacion() {
+  var clasificacion = document.getElementById("clasificacion").value;
+  if (clasificacion == 0) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Debes seleccionar la opción de clasificación.",
+    });
+    return false;
+  }
+}
+
 function FechaRealizado() {
   var fRealizado = document.getElementById("fRealizado").value;
   if (fRealizado == 0) {
@@ -179,13 +257,13 @@ function FechaEntrega() {
     return false;
   }
 }
-function TipoContrato() {
-  var tContrato = document.getElementById("tContrato").value;
-  if (tContrato == 0) {
+function Tipo() {
+  var tipo = document.getElementById("tipo").value;
+  if (tipo == 0) {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Debes seleccionar la opción de tipo de contrato."
+      text: "Debes seleccionar la opción de tipo."
     });
     return false;
   }
@@ -334,6 +412,46 @@ function Valor() {
   }
 }
 
+function ValorCompra() {
+  var vCompra = document.getElementById("vCompra").value;
+  if (vCompra == 0) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Debes llenar el campo de valor de compra."
+    });
+    return false;
+  }
+  if (vCompra < 0) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "El valor de compra no puede ser menor a 0."
+    });
+    return false;
+  }
+}
+
+function ValorVenta() {
+  var vVenta = document.getElementById("vVenta").value;
+  if (vVenta == 0) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Debes llenar el campo de valor de venta."
+    });
+    return false;
+  }
+  if (vVenta < 0) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "El valor de venta no puede ser menor a 0."
+    });
+    return false;
+  }
+}
+
 function Empresa() {
   var empresa = document.getElementById("empresa").value;
   if (empresa == 0) {
@@ -356,6 +474,55 @@ function Empresa() {
 
 
 // Formularios
+function valCompra() {
+  Documento();
+  FechaRealizado();
+  FechaEntrega();
+  Descripcion();
+}
+
+function valPedidos() {
+  Producto();
+  Proveedor();
+  Cantidad();
+  Hora();
+  Fecha();
+}
+
+function valProveedor() {
+  Documento();
+  Nombre();
+  Apellido();
+  Direccion();
+  Telefono();
+  Empresa();
+  Producto();
+}
+
+function valVenta() {
+  DocumentoVendedor();
+  DocumentoCliente();
+  Hora();
+  Fecha();
+  Descripcion();
+}
+
+function valServicio() {
+  Tipo();
+  Descripcion();
+  Producto();
+  Cantidad();
+  Valor();
+}
+
+function valProductos() {
+  Nombre();
+  Descripcion();
+  Clasificacion();
+  ValorCompra();
+  ValorVenta();
+}
+
 function valEmpleado() {
   Documento();
   Nombre();
@@ -383,40 +550,11 @@ function valCliente() {
   Direccion();
 }
 
-function valCompra() {
-  Documento();
-  FechaRealizado();
-  FechaEntrega();
-  Descripcion();
+function valLogin() {
+  Usuario();
+  Contrasena();
 }
 
-function valPedidos() {
-  Producto();
-  Proveedor();
-  Cantidad();
-  Hora();
-  Fecha();
-}
-
-function valProveedor() {
-  Documento();
-  Nombre();
-  Apellido();
-  Direccion();
-  Telefono();
-  Empresa();
-  Producto();
-}
-
-function valServicio() {
-  Descripcion();
-  Cantidad();
-  Valor();
-}
-
-function valVenta() {
-  Documento();
-  Fecha();
-  Hora();
-
+function valRecuperar() {
+  Correo();
 }
