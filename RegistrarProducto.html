@@ -109,6 +109,9 @@
             </li>
             <hr />
             <li>
+              <a href="Usuarios.html"><i class="icon ion-md-contact p-1"></i>Gestión de usuarios</a>
+            </li>
+            <li>
               <a href="#sb-compras" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed"><i
                   class="icon ion-md-cart p-1"></i>Compras</a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-compras">
@@ -173,10 +176,7 @@
                   <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
                     clientes</a>
                 </li>
-                <li>
-                  <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
-                    permisos</a>
-                </li>
+
               </ul>
             </li>
             <hr />
@@ -204,8 +204,8 @@
         <!-- Inicio CONTENIDO PAGINA -->
         <div class="card" id="forms">
           <div class="card-header">Registrar producto</div>
-          <div class="card-body">
-            <form onsubmit="return valProductos()">
+          <form action="ConsultarInventario.html" method="post" onsubmit="return valProductos();">
+            <div class="card-body">
               <div class="form-group">
                 <label>Nombre</label>
                 <input type="text" class="form-control" placeholder="Ingresa el nombre del producto..." id="nombre" />
@@ -240,26 +240,25 @@
                     id="vVenta" />
                 </div>
               </div>
-            </form>
-          </div>
-          <div class="card-footer">
-            <!-- col-sm-1 col-xs-1 col-md-1 col-lg-1 -->
-            <div class="text-right">
-              <a href="ConsultarInventario.html"><button type="button" class="btn btn-danger md-4 hover-dark">
-                  Cancelar
-                </button></a>
-              <a href="#ConsultarInventario.html"><button type="submit" onclick="valProductos();"
-                  class="btn btn-primary md-4 hover-dark">
-                  Guardar
-                </button></a>
             </div>
-          </div>
+            <div class="card-footer">
+              <!-- col-sm-1 col-xs-1 col-md-1 col-lg-1 -->
+              <div class="text-right">
+                <a href="ConsultarInventario.html"><button type="button" class="btn btn-danger md-4 hover-dark">
+                    Cancelar
+                  </button></a>
+                <button type="submit" onclick="valProductos();" class="btn btn-primary md-4 hover-dark">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
         <!-- Fin CONTENIDO PAGINA -->
       </div>
 
-      <!-- Fin CONTENIDO -->
     </div>
+    <!-- Fin CONTENIDO -->
   </div>
   <!-- Scripts Javascript -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

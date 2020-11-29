@@ -111,6 +111,9 @@
             </li>
             <hr />
             <li>
+              <a href="Usuarios.html"><i class="icon ion-md-contact p-1"></i>Gestión de usuarios</a>
+            </li>
+            <li>
               <a href="#sb-compras" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed"><i
                   class="icon ion-md-cart p-1"></i>Compras</a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-compras">
@@ -175,10 +178,7 @@
                   <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
                     clientes</a>
                 </li>
-                <li>
-                  <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
-                    permisos</a>
-                </li>
+
               </ul>
             </li>
             <hr />
@@ -215,8 +215,8 @@
         <!-- Inicio CONTENIDO PAGINA -->
         <div class="card" id="forms">
           <div class="card-header">Datos del pedido</div>
-          <div class="card-body">
-            <form onsubmit="return valPedidos()">
+          <form action="EditarPedidos.html" method="post" onsubmit="return valPedidos();">
+            <div class="card-body">
               <div class="form-row">
                 <div class="form-group col-md-4">
                   <label>Producto</label>
@@ -253,24 +253,22 @@
                   <input type="date" class="form-control" id="fecha" />
                 </div>
               </div>
-            </form>
-          </div>
-
-          <div class="card-footer">
-            <div class="text-right">
-              <a href="EditarPedidos.html"><button type="button" class="btn btn-danger md-4 hover-dark">
-                  Regresar
-                </button></a>
-              <a href="#EditarPedidos.html"><button type="submit" onclick="valPedidos();"
-                  class="btn btn-primary md-4 hover-dark">
-                  Siguiente
-                </button></a>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Fin CONTENIDO PAGINA -->
+            <div class="card-footer">
+              <div class="text-right">
+                <a href="EditarPedidos.html"><button type="button" class="btn btn-danger md-4 hover-dark">
+                    Regresar
+                  </button></a><button type="submit" onclick="valPedidos();" class="btn btn-primary md-4 hover-dark">
+                  Siguiente
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Fin CONTENIDO PAGINA -->
+      </div>
     </div>
 
     <!-- Fin CONTENIDO -->

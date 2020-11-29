@@ -110,6 +110,9 @@
             </li>
             <hr />
             <li>
+              <a href="Usuarios.html"><i class="icon ion-md-contact p-1"></i>Gestión de usuarios</a>
+            </li>
+            <li>
               <a href="#sb-compras" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed"><i
                   class="icon ion-md-cart p-1"></i>Compras</a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-compras">
@@ -174,10 +177,7 @@
                   <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
                     clientes</a>
                 </li>
-                <li>
-                  <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
-                    permisos</a>
-                </li>
+
               </ul>
             </li>
             <hr />
@@ -206,8 +206,9 @@
         <!-- Inicio CONTENIDO PAGINA -->
         <div class="card" id="forms">
           <div class="card-header">Registrar cliente</div>
-          <div class="card-body">
-            <form onsubmit="return valCliente()">
+          <form action="ConsultarClientes.html" method="post" onsubmit="return valCliente();">
+            <div class="card-body">
+
               <div class="form-group">
                 <label>Documento</label>
                 <input type="number" class="form-control" placeholder="Ingresa el documento del cliente..."
@@ -236,21 +237,21 @@
                 <input type="text" class="form-control" placeholder="Ingresa la dirección del cliente..."
                   id="direccion" />
               </div>
-            </form>
-          </div>
 
-          <div class="card-footer">
-            <!-- col-sm-1 col-xs-1 col-md-1 col-lg-1 -->
-            <div class="text-right">
-              <a href="ConsultarClientes.html"><button type="button" class="btn btn-danger md-4 hover-dark">
-                  Cancelar
-                </button></a>
-              <a href="#ConsultarClientes.html"><button type="submit" onclick="valCliente();"
-                  class="btn btn-primary md-4 hover-dark">
-                  Guardar
-                </button></a>
             </div>
-          </div>
+
+            <div class="card-footer">
+              <!-- col-sm-1 col-xs-1 col-md-1 col-lg-1 -->
+              <div class="text-right">
+                <a href="ConsultarClientes.html"><button type="button" class="btn btn-danger md-4 hover-dark">
+                    Cancelar
+                  </button></a>
+                <button type="submit" onclick="valCliente();" class="btn btn-primary md-4 hover-dark">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
 

@@ -110,6 +110,9 @@
             </li>
             <hr />
             <li>
+              <a href="Usuarios.html"><i class="icon ion-md-contact p-1"></i>Gestión de usuarios</a>
+            </li>
+            <li>
               <a href="#sb-compras" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed"><i
                   class="icon ion-md-cart p-1"></i>Compras</a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-compras">
@@ -175,10 +178,7 @@
                   <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
                     clientes</a>
                 </li>
-                <li>
-                  <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
-                    permisos</a>
-                </li>
+
               </ul>
             </li>
             <hr />
@@ -217,8 +217,8 @@
               </li>
             </ul>
           </div>
-          <div class="card-body">
-            <form onsubmit="return valEmpleado()">
+          <form action="RegistrarEmpleadoContratos.html" method="post" onsubmit="return valEmpleado();">
+            <div class="card-body">
               <div class="form-group">
                 <label>Documento de identidad</label>
                 <input type="number" min="0.00" class="form-control" placeholder="Ingresa el documento de identidad..."
@@ -264,19 +264,18 @@
                 <label>Correo eléctronico</label>
                 <input type="email" class="form-control" placeholder="Ingresa el correo eléctronico..." id="correo" />
               </div>
-            </form>
-          </div>
-          <div class="card-footer">
-            <div class="text-right">
-              <a href="ConsultarEmpleados.html"><button type="submit" class="btn btn-danger md-4 hover-dark">
-                  Cancelar
-                </button></a>
-              <a href="#RegistrarEmpleadoContratos.html"><button type="submit" onclick="valEmpleado();"
-                  class="btn btn-primary md-4 hover-dark">
-                  Siguiente
-                </button></a>
             </div>
-          </div>
+            <div class="card-footer">
+              <div class="text-right">
+                <a href="ConsultarEmpleados.html"><button type="submit" class="btn btn-danger md-4 hover-dark">
+                    Cancelar
+                  </button></a>
+                <button type="submit" onclick="valEmpleado();" class="btn btn-primary md-4 hover-dark">
+                  Siguiente
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
         <!-- Fin CONTENIDO PAGINA -->
       </div>

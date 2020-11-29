@@ -110,6 +110,9 @@
             </li>
             <hr />
             <li>
+              <a href="Usuarios.html"><i class="icon ion-md-contact p-1"></i>Gestión de usuarios</a>
+            </li>
+            <li>
               <a href="#sb-compras" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed"><i
                   class="icon ion-md-cart p-1"></i>Compras</a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-compras">
@@ -174,10 +177,7 @@
                   <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
                     clientes</a>
                 </li>
-                <li>
-                  <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
-                    permisos</a>
-                </li>
+
               </ul>
             </li>
             <hr />
@@ -214,9 +214,8 @@
         <!-- Inicio CONTENIDO PAGINA -->
         <div class="card" id="forms">
           <div class="card-header">Datos del servicio</div>
-          <div class="card-body">
-            <form onsubmit=" return valServicio();">
-
+          <form action="EditarServicios.html" method="post" onsubmit="return valServicio();">
+            <div class="card-body">
               <div class="form-group">
                 <label>Tipo de servicio</label>
                 <select id="tipo" class="form-control">
@@ -255,37 +254,22 @@
                     usados)</small>
                 </div>
               </div>
-              <!-- <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label>Hora realizado</label>
-                  <input type="time" min="0.00" class="form-control" required />
-                </div>
-
-                <div class="form-group col-md-6">
-                  <label>Fecha realizado</label>
-                  <input type="date" class="form-control" required />
-                </div>
-              </div> -->
-            </form>
-          </div>
-
-          <div class="card-footer">
-            <div class="text-right">
-              <a href="EditarServicios.html"><button type="button" class="btn btn-danger md-4 hover-dark">
-                  Regresar
-                </button></a>
-              <a href="#EditarServicios.html"><button type="submit" onclick="valServicio();"
-                  class="btn btn-primary md-4 hover-dark">
-                  Siguiente
-                </button></a>
             </div>
-          </div>
+            <div class="card-footer">
+              <div class="text-right">
+                <a href="EditarServicios.html"><button type="button" class="btn btn-danger md-4 hover-dark">
+                    Regresar
+                  </button></a>
+                <button type="submit" onclick="valServicio();" class="btn btn-primary md-4 hover-dark">
+                  Siguiente
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
+        <!-- Fin CONTENIDO PAGINA -->
       </div>
-
-      <!-- Fin CONTENIDO PAGINA -->
     </div>
-
     <!-- Fin CONTENIDO -->
   </div>
   <!-- Scripts Javascript -->

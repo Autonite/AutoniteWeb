@@ -110,6 +110,9 @@
             </li>
             <hr />
             <li>
+              <a href="Usuarios.html"><i class="icon ion-md-contact p-1"></i>Gestión de usuarios</a>
+            </li>
+            <li>
               <a href="#sb-compras" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed"><i
                   class="icon ion-md-cart p-1"></i>Compras</a>
               <ul class="collapse list-unstyled" data-parent="#accordion" id="sb-compras">
@@ -174,10 +177,7 @@
                   <a href="ConsultarClientes.html"><i class="icon ion-md-radio-button-off"></i>Consultar
                     clientes</a>
                 </li>
-                <li>
-                  <a href="AusenciasPermisos.html"><i class="icon ion-md-radio-button-off"></i>Ausencias y
-                    permisos</a>
-                </li>
+
               </ul>
             </li>
             <hr />
@@ -216,8 +216,8 @@
               </li>
             </ul>
           </div>
-          <div class="card-body">
-            <form onsubmit="return valContratos()">
+          <form action="ConsultarEmpleados.html" method="post" onsubmit="return valContratos();">
+            <div class="card-body">
               <div class="form-group">
                 <label>Tipo de contrato</label>
                 <select id="tipo" class="form-control">
@@ -252,19 +252,18 @@
                   <small class="form-text text-muted">Número de horas diarias</small>
                 </div>
               </div>
-            </form>
-          </div>
-          <div class="card-footer">
-            <div class="text-right">
-              <a href="RegistrarEmpleado.html"><button type="submit" class="btn btn-danger md-4 hover-dark">
-                  Regresar
-                </button></a>
-              <a href="#ConsultarEmpleados.html"><button type="submit" onclick="valContratos();"
-                  class="btn btn-primary md-4 hover-dark">
-                  Guardar
-                </button></a>
             </div>
-          </div>
+            <div class="card-footer">
+              <div class="text-right">
+                <a href="RegistrarEmpleado.html"><button type="submit" class="btn btn-danger md-4 hover-dark">
+                    Regresar
+                  </button></a>
+                <button type="submit" onclick="valContratos();" class="btn btn-primary md-4 hover-dark">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
         <!-- Fin CONTENIDO PAGINA -->
       </div>
