@@ -1,0 +1,48 @@
+h3 {
+  font-size: 50px;
+  color: rgb(0, 153, 255);
+  font-weight: bold;
+}
+h1 {
+  font-size: 120px;
+  font-weight: bold;
+}
+body {
+  background-image: url(../img/image1.jpg);
+  background-size: cover;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.error-template {
+  padding: 60px;
+  margin: 60px 300px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid#a0a5b1;
+  border-radius: 25px;
+  width: 500px;
+  height: 500px;
+}
+
+.hover-light:hover {
+  color: white !important;
+}
+
+.hover-dark:hover {
+  color: black !important;
+}
+
+button {
+  font-weight: bold !important;
+  padding-right: 20px !important;
+  padding-left: 20px !important;
+  transition: all 0.25s !important;
+  margin: 0px 5px;
+}
+
+button:hover {
+  background: transparent !important;
+}
+button:active {
+  transform: scale(1.05);
+}
