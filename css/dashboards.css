@@ -1,0 +1,14 @@
+.card-header img {
+  width: 6rem;
+  height: 6rem;
+  display: block;
+  margin: auto;
+}
+
+.card-body .card {
+  cursor: pointer;
+}
+
+.card-body .card:hover {
+  transform: scale(1.025);
+}
