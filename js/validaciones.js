@@ -483,52 +483,52 @@ function valTodo(validaciones) {
 }
 
 function valCompra() {
-  var validaciones = [Documento(), FechaRealizado(), FechaEntrega(), Descripcion()];
+  var validaciones = [Descripcion(), FechaEntrega(), FechaRealizado(), Documento()];
   return valTodo(validaciones);
 }
 
 function valPedidos() {
-  var validaciones = [Producto(), Proveedor(), Cantidad(), Hora(), Fecha()];
+  var validaciones = [Fecha(), Hora(), Cantidad(), Proveedor(), Producto()];
   return valTodo(validaciones);
 }
 
 function valProveedor() {
-  var validaciones = [Documento(), Nombre(), Apellido(), Direccion(), Telefono(), Empresa(), Producto()];
+  var validaciones = [Producto(), Empresa(), Telefono(), Direccion(), Apellido(), Nombre(), Documento()];
   return valTodo(validaciones);
 }
 
 function valVenta() {
-  var validaciones = [DocumentoVendedor(), DocumentoCliente(), Hora(), Fecha(), Descripcion()];
+  var validaciones = [Descripcion(), Fecha(), Hora(), DocumentoCliente(), DocumentoVendedor()];
   return valTodo(validaciones);
 }
 
 function valServicio() {
-  var validaciones = [Tipo(), Descripcion(), Producto(), Cantidad(), Valor()];
+  var validaciones = [Valor(), Cantidad(), Producto(), Descripcion(), Tipo()];
   return valTodo(validaciones);
 }
 
 function valProductos() {
-  var validaciones = [Nombre(), Descripcion(), Clasificacion(), ValorCompra(), ValorVenta()];
+  var validaciones = [ValorVenta(), ValorCompra(), Clasificacion(), Descripcion(), Nombre()];
   return valTodo(validaciones);
 }
 
 function valEmpleado() {
-  validaciones = [Documento(), Nombre(), Apellido(), Telefono(), Edad(), Cargo(), Direccion(), Correo()];
+  validaciones = [Correo(), Direccion(), Cargo(), Edad(), Telefono(), Apellido(), Nombre(), Documento()];
   return valTodo(validaciones);
 }
 
 function valContratos() {
-  validaciones = [Tipo(), InicioContrato(), FinContrato(), Salario(), DuracionJornada()];
+  validaciones = [DuracionJornada(), Salario(), FinContrato(), InicioContrato(), Tipo()];
   return valTodo(validaciones);
 }
 
 function valCliente() {
-  validaciones = [Documento(), Nombre(), Apellido(), Telefono(), Direccion()];
+  validaciones = [Direccion(), Telefono(), Apellido(), Nombre(), Documento()];
   return valTodo(validaciones);
 }
 
 function valLogin() {
-  validaciones = [Usuario(), Contrasena()];
+  validaciones = [Contrasena(), Usuario()];
   return valTodo(validaciones);
 }
 
