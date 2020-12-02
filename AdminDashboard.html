@@ -205,7 +205,7 @@
         <div class="row">
           <div class="col-md-8">
             <div class="card" id="forms">
-              <div class="card-header">Ventas en los últimos 6 meses</div>
+              <div class="card-header">Ganancias mensuales</div>
               <div class="card-body">
                 <div id="ventas6meses" style="height: 300px; width: 100%;"></div>
               </div>
@@ -215,7 +215,7 @@
             <div class="card" id="forms">
               <div class="card-header">Ventas semanales</div>
               <div class="card-body">
-                <div id="ventassemanales" style="height: 300px; width: 100%;"></div>
+                <div id="ventasSem" style="height: 300px; width: 100%;"></div>
               </div>
             </div>
           </div>
@@ -272,7 +272,7 @@
       </div>
       <script>
         window.onload = function () {
-          var chart = new CanvasJS.Chart("ventas6meses", {
+          var chart1 = new CanvasJS.Chart("ventas6meses", {
             animationEnabled: true, // change to true		
             data: [
               {
@@ -289,29 +289,28 @@
               }
             ]
           });
-          chart.render();
-        }
-      </script>
-      <script>
-        window.onload = function () {
-          var chart = new CanvasJS.Chart("ventassemanales", {
+          var chart2 = new CanvasJS.Chart("ventasSem", {
             animationEnabled: true, // change to true		
-            data: [
-              {
-                // Change type to "bar", "area", "spline", "pie",etc.
-                type: "column",
-                dataPoints: [
-                  { label: "Julio", y: 10 },
-                  { label: "Agosto", y: 12 },
-                  { label: "Septiembre", y: 20 },
-                  { label: "Octubre", y: 30 },
-                  { label: "Noviembre", y: 26 },
-                  { label: "Diciembre", y: 5 }
-                ]
-              }
-            ]
+            data: [{
+              type: "doughnut",
+              innerRadius: "50%",
+              showInLegend: true,
+              legendText: "{label}",
+              indexLabel: "#percent%",
+              indexLabelPlacement: "inside",
+              dataPoints: [
+                { label: "Lunes", y: 10 },
+                { label: "Martes", y: 5 },
+                { label: "Miércoles", y: 8 },
+                { label: "Jueves", y: 7 },
+                { label: "Viernes", y: 5 },
+                { label: "Sábado", y: 2 },
+                { label: "Domingo", y: 4 }
+              ]
+            }]
           });
-          chart.render();
+          chart1.render();
+          chart2.render();
         }
       </script>
       <!-- <script>
