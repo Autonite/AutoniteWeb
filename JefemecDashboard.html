@@ -44,7 +44,7 @@
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i
                 class="icon ion-md-person px-1"></i></a>
             <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-right extended account">
-              <h6 class="bg-primary text-white">Administrador</h6>
+              <h6 class="bg-primary text-white">Jefe de mecánicos</h6>
               <div class="user-info">
                 <span class="photo"><i class="icon ion-md-contact"></i></span><span class="name">Juan Pablo
                   Machado</span><span class="document">1005716784</span>
@@ -192,7 +192,7 @@
     <div id="content">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb align-items-center">
-          <h2 class="font-weight-bold m-0 p-0">» Administrador</h2>
+          <h2 class="font-weight-bold m-0 p-0">» Jefe de mecánicos</h2>
           <li class="ml-auto breadcrumb-item active">
             <i class="icon ion-md-home px-1"></i>Inicio
           </li>
@@ -210,14 +210,14 @@
               <div class="col-md-3">
                 <div class="card text-center">
                   <div class="card-header bg-info">
-                    <img src="img/iconoRegistro.png" class="card-img-top">
+                    <img src="img/iconoProveedores.png" class="card-img-top">
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Usuarios</h5>
-                    <p class="card-text text-muted">Registrar un nuevo usuario en el sistema.
+                    <h5 class="card-title font-weight-bold">Proveedores</h5>
+                    <p class="card-text text-muted">Consultar proveedores en el sistema.
                     </p>
-                    <a href="ConsultarUsuarios.html"><button class="btn btn-info hover-dark">Registrar
-                        usuario</button></a>
+                    <a href="ConsultarProveedores.html"><button class="btn btn-info hover-dark">Consultar
+                        proveedor</button></a>
                   </div>
                 </div>
               </div>
@@ -238,13 +238,14 @@
               <div class="col-md-3">
                 <div class="card text-center">
                   <div class="card-header bg-danger">
-                    <img src="img/iconoVenta.png" class="card-img-top">
+                    <img src="img/iconoProductos.png" class="card-img-top">
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Ventas</h5>
-                    <p class="card-text text-muted">Realizar una nueva venta en el sistema (Servicio - Venta).
+                    <h5 class="card-title font-weight-bold">Productos</h5>
+                    <p class="card-text text-muted">Consultar o registrar productos en el sistema.
                     </p>
-                    <a href="RegistrarVentas.html"><button class="btn btn-danger hover-dark">Realizar venta</button></a>
+                    <a href="ConsultarProductos.html"><button class="btn btn-danger hover-dark">Consultar
+                        productos</button></a>
                   </div>
                 </div>
               </div>
@@ -272,7 +273,7 @@
         <div class="row">
           <div class="col-md-8">
             <div class="card cardpanel">
-              <div class="card-header">Ingresos y egresos en los últimos 6 meses</div>
+              <div class="card-header">Productos más usados</div>
               <div class="card-body">
                 <div id="grafico1" style="height: 300px; width: 100%;"></div>
               </div>
@@ -280,7 +281,7 @@
           </div>
           <div class="col-md-4">
             <div class="card cardpanel">
-              <div class="card-header">Ventas semanales</div>
+              <div class="card-header">Compras semanales</div>
               <div class="card-body">
                 <div id="grafico2" style="height: 300px; width: 100%;"></div>
               </div>
@@ -298,56 +299,45 @@
   <script>
     window.onload = function () {
       var chart1 = new CanvasJS.Chart("grafico1", {
-        animationEnabled: true, // change to true		
-        data: [{
-          type: "line",
-          showInLegend: true,
-          name: "Ingresos",
-          markerType: "square",
-          color: "#58e075",
-          dataPoints: [
-            { label: "Junio", y: 1550000 },
-            { label: "Julio", y: 2400000 },
-            { label: "Agosto", y: 1900000 },
-            { label: "Septiembre", y: 4250000 },
-            { label: "Octubre", y: 2000000 },
-            { label: "Noviembre", y: 2200000 },
-            { label: "Diciembre", y: 3000000 }
-          ]
+        animationEnabled: true,
+        axisX: {
+          margin: 10,
+          labelPlacement: "inside",
+          tickPlacement: "inside"
         },
-        {
-          type: "line",
-          showInLegend: true,
-          name: "Egresos",
-          color: "#F08080",
+        data: [{
+          type: "bar",
+          axisYType: "secondary",
+          indexLabel: "{y}",
           dataPoints: [
-            { label: "Junio", y: 2500000 },
-            { label: "Julio", y: 1800000 },
-            { label: "Agosto", y: 2000000 },
-            { label: "Septiembre", y: 3200000 },
-            { label: "Octubre", y: 2000000 },
-            { label: "Noviembre", y: 2400000 },
-            { label: "Diciembre", y: 2800000 }
+            { label: "Neúmaticos", y: 30 },
+            { label: "Espejos", y: 10 },
+            { label: "Motores", y: 5 },
+            { label: "Retenedores", y: 22 },
+            { label: "Parachoques", y: 13 },
+            { label: "Alerones", y: 3 }
           ]
         }]
       });
       var chart2 = new CanvasJS.Chart("grafico2", {
         animationEnabled: true, // change to true		
         data: [{
-          type: "doughnut",
-          innerRadius: "50%",
+          type: "column",
+          name: "Noviembre",
           showInLegend: true,
-          legendText: "{label}",
-          indexLabel: "#percent%",
-          indexLabelPlacement: "inside",
           dataPoints: [
-            { label: "Lunes", y: 10 },
-            { label: "Martes", y: 5 },
-            { label: "Miércoles", y: 8 },
-            { label: "Jueves", y: 7 },
-            { label: "Viernes", y: 5 },
-            { label: "Sábado", y: 2 },
-            { label: "Domingo", y: 4 }
+            { label: "Compras", y: 200 },
+            { label: "Ventas", y: 210 }
+          ]
+        },
+        {
+          type: "column",
+          name: "Diciembre",
+          axisYType: "secondary",
+          showInLegend: true,
+          dataPoints: [
+            { label: "Compras", y: 210 },
+            { label: "Ventas", y: 195 }
           ]
         }]
       });

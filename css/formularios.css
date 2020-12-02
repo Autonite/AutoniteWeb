@@ -1,4 +1,4 @@
-#forms {
+.cardpanel .card {
   width: 100%;
   margin: auto;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -7,13 +7,13 @@
   box-shadow: 3px 5px 4px 0px gray;
 }
 
-#forms .card-header,
-#forms .card-footer {
+.cardpanel .card-header,
+.cardpanel .card-footer {
   font-weight: bold;
   font-size: 1.05rem;
   background-color: #f0f3f5;
 }
 
-#forms .card-footer button {
+.cardpanel .card-footer button {
   text-align: center;
 }
