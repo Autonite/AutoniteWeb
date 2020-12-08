@@ -236,15 +236,27 @@
                 <div class="table-options mb-3">
                     <a href="#modal-registeruser" data-toggle="modal"><button class="btn btn-primary hover-dark">
                             Registrar usuarios</button></a>
-                    <div class="search-box">
-
-                        <i class="icon ion-md-search"></i>
-                        <input type="text" class="form-control" placeholder="Buscar" />
-                    </div>
                 </div>
+                <div class="search-box">
+                    <i class="icon ion-md-search"></i>
+                    <input type="text" id="myInput" onkeyup="buscar()" class="form-control" placeholder="Buscar" />
+                </div>
+
+                <label class="filtro">
+                    Mostrar
+                    <select name="example_length" aria-controls="example" class="numeros">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                    </select>
+                    registros
+                </label>
+
                 <div class="table-responsive">
                     <div class="table-wrapper">
-                        <table class="table table-striped table-hover table-bordered order-table text-center">
+                        <table id="myTable"
+                            class="table table-striped table-hover table-bordered order-table text-center">
+
                             <thead>
                                 <tr>
                                     <th>Documento</th>
@@ -267,8 +279,8 @@
                                     <td>
                                         <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow"
                                             title="Servicios"><i class="icon ion-md-create"></i></a>
-                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                                                class="icon ion-md-trash"></i></a>
+                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
+                                            data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -281,8 +293,8 @@
                                     <td>
                                         <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow"
                                             title="Servicios"><i class="icon ion-md-create"></i></a>
-                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                                                class="icon ion-md-trash"></i></a>
+                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
+                                            data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -295,8 +307,8 @@
                                     <td>
                                         <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow"
                                             title="Servicios"><i class="icon ion-md-create"></i></a>
-                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                                                class="icon ion-md-trash"></i></a>
+                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
+                                            data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -309,8 +321,8 @@
                                     <td>
                                         <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow"
                                             title="Servicios"><i class="icon ion-md-create"></i></a>
-                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                                                class="icon ion-md-trash"></i></a>
+                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
+                                            data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -323,8 +335,8 @@
                                     <td>
                                         <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow"
                                             title="Servicios"><i class="icon ion-md-create"></i></a>
-                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                                                class="icon ion-md-trash"></i></a>
+                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
+                                            data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                                     </td>
                                 </tr>
 
@@ -338,8 +350,8 @@
                                     <td>
                                         <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow"
                                             title="Servicios"><i class="icon ion-md-create"></i></a>
-                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                                                class="icon ion-md-trash"></i></a>
+                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
+                                            data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -352,8 +364,8 @@
                                     <td>
                                         <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow"
                                             title="Servicios"><i class="icon ion-md-create"></i></a>
-                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                                                class="icon ion-md-trash"></i></a>
+                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
+                                            data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -366,8 +378,8 @@
                                     <td>
                                         <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow"
                                             title="Servicios"><i class="icon ion-md-create"></i></a>
-                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                                                class="icon ion-md-trash"></i></a>
+                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
+                                            data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -380,8 +392,8 @@
                                     <td>
                                         <a href="#modal-table" data-toggle="modal" class="mx-2 h5 iconyellow"
                                             title="Servicios"><i class="icon ion-md-create"></i></a>
-                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" data-toggle="tooltip"><i
-                                                class="icon ion-md-trash"></i></a>
+                                        <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
+                                            data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -426,6 +438,7 @@
     </div>
     <!-- Scripts Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/tablas.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -433,6 +446,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 
 </html>
