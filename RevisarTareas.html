@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="icon" href="img/logo.png" />
-  <title>Inventario | Autonite</title>
+  <title>Ventas | Autonite</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -100,7 +100,7 @@
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header bg-primary text-light">
-            <h5 class="modal-title font-weight-bold">Entradas / Salidas</h5>
+            <h5 class="modal-title font-weight-bold">Servicios agendados</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -111,47 +111,89 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Fecha de entrada</th>
-                    <th scope="col">Hora de entrada</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Producto empleado</th>
+                    <th scope="col">Cantidad empleada</th>
+                    <th scope="col">Valor unit. producto</th>
+                    <th scope="col">Valor total productos</th>
+                    <th scope="col">Valor servicio</th>
+                    <th scope="col">Valor total</th>
+                    <th scope="col">Estado</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>10</td>
-                    <td>10/10/2020</td>
-                    <td>5:56 PM</td>
+                    <td>Reparación</td>
+                    <td>Neumaticos dañados</td>
+                    <td>Neumaticos</td>
+                    <td>3</td>
+                    <td>$10000</td>
+                    <td>$30000</td>
+                    <td>$7500</td>
+                    <td>$37500</td>
+                    <td><span class="badge badge-warning">Pendiente</span></td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
-                    <td>20</td>
-                    <td>20/11/2020</td>
-                    <td>4:22 PM</td>
+                    <td>Lavado</td>
+                    <td>Lavado de carro</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>$27500</td>
+                    <td>$27500</td>
+                    <td><span class="badge badge-primary">Asignado</span></td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
-                    <td>8</td>
-                    <td>25/11/2020</td>
-                    <td>11:59 AM</td>
+                    <td>Lavado</td>
+                    <td>Lavado de carro</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>$27500</td>
+                    <td>$27500</td>
+                    <td><span class="badge badge-info">En proceso</span></td>
                   </tr>
                   <tr>
                     <th scope="row">4</th>
-                    <td>14</td>
-                    <td>30/09/2020</td>
-                    <td>5:20 PM</td>
+                    <td>Lavado</td>
+                    <td>Lavado de carro</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>$27500</td>
+                    <td>$27500</td>
+                    <td><span class="badge badge-danger">Cancelado</span></td>
                   </tr>
                   <tr>
                     <th scope="row">5</th>
-                    <td>23</td>
-                    <td>20/12/2020</td>
-                    <td>10:22 AM</td>
+                    <td>Lavado</td>
+                    <td>Lavado de carro</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>$27500</td>
+                    <td>$27500</td>
+                    <td><span class="badge badge-secondary">Finalizado</span></td>
                   </tr>
                   <tr>
                     <th scope="row">6</th>
-                    <td>18</td>
-                    <td>01/05/2021</td>
-                    <td>02:25 PM</td>
+                    <td>Lavado</td>
+                    <td>Lavado de carro</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>$27500</td>
+                    <td>$27500</td>
+                    <td><span class="badge badge-success">Entregado</span></td>
                   </tr>
                 </tbody>
               </table>
@@ -261,11 +303,11 @@
     <div id="content">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb align-items-center">
-          <h2 class="font-weight-bold m-0 p-0">» Consultar inventario</h2>
+          <h2 class="font-weight-bold m-0 p-0">» Revisar tareas</h2>
           <li class="ml-auto breadcrumb-item">
             <a href="AdminDashboard.html"><i class="icon ion-md-home px-1"></i>Inicio</a>
           </li>
-          <li class="breadcrumb-item active">Consultar inventario</li>
+          <li class="breadcrumb-item active">Revisar tareas</li>
         </ol>
         <hr class="m-0 p-0" />
       </nav>
@@ -273,14 +315,15 @@
       <div id="page">
         <!-- Inicio CONTENIDO PAGINA -->
         <div id="registrar" class="table-options mb-3">
-          <a href="RegistrarProducto.html"><button class="btn btn-primary hover-dark">
-              Registrar producto
+          <a href="RegistrarVentas.html"><button class="btn btn-primary hover-dark">
+              Registrar venta
             </button></a>
         </div>
         <div class="search-box">
           <i class="icon ion-md-search"></i>
           <input type="text" id="myInput" onkeyup="buscar()" class="form-control" placeholder="Buscar" />
         </div>
+
 
         <label class="filtro">
           Mostrar
@@ -292,191 +335,188 @@
           registros
         </label>
 
+
         <div class="table-responsive">
           <div class="table-wrapper">
             <table id="myTable" class="table table-striped table-hover table-bordered order-table text-center">
-
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Nombre</th>
+                  <th>Vendedor</th>
+                  <th>Cliente</th>
+                  <th>Hora venta</th>
+                  <th>Fecha venta</th>
                   <th>Descripción</th>
-                  <th>Clasificación</th>
-                  <th>Valor compra</th>
-                  <th>Valor venta</th>
-                  <th>Entradas / Salidas</th>
-                  <th>Stock</th>
-                  <th>Estado</th>
+                  <th>Precio total</th>
                   <th>Funciones</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>RP001</td>
-                  <td>Retenedores</td>
-                  <td>....</td>
+                  <td>RF001</td>
+                  <td>Juan Perez</td>
+                  <td>Diana Lizeth</td>
+                  <td>8:30 AM</td>
+                  <td>14/11/2019</td>
                   <td>..</td>
-                  <td>$ 230.000</td>
-                  <td>$ 350.000</td>
-                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
-                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
-                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
-                  <td>4</td>
-                  <td><span class="badge badge-success">Disponible</span></td>
+                  <td>$1000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
+                        class="icon ion-md-eye"></i></a>
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
                       data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
                 <tr>
-                  <td>RP002</td>
-                  <td>Retenedores</td>
-                  <td>....</td>
+                  <td>RF002</td>
+                  <td>Luis Ernesto</td>
+                  <td>Maria Bermudez</td>
+                  <td>2:20 PM</td>
+                  <td>20/01/2020</td>
                   <td>..</td>
-                  <td>$ 230.000</td>
-                  <td>$ 350.000</td>
-                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
-                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
-                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
-                  <td>4</td>
-                  <td><span class="badge badge-warning">Stock bajo</span></td>
+                  <td>$1000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
+                        class="icon ion-md-eye"></i></a>
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
                       data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
                 <tr>
-                  <td>RP003</td>
-                  <td>Retenedores</td>
-                  <td>....</td>
+                  <td>RF003</td>
+                  <td>Pedro Samper</td>
+                  <td>Jessica Ulrich</td>
+                  <td>4:10 PM</td>
+                  <td>15/03/2020</td>
                   <td>..</td>
-                  <td>$ 230.000</td>
-                  <td>$ 350.000</td>
-                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
-                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
-                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
-                  <td>4</td>
-                  <td><span class="badge badge-danger">No disponible</span></td>
+                  <td>$1000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
+                        class="icon ion-md-eye"></i></a>
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
                       data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
                 <tr>
-                  <td>RP004</td>
-                  <td>Motor</td>
-                  <td>....</td>
+                  <td>RF001</td>
+                  <td>Daniel Ochoa</td>
+                  <td>Juan Espinosa</td>
+                  <td>10:30 AM</td>
+                  <td>30/10/2020</td>
                   <td>..</td>
-                  <td>$ 230.000</td>
-                  <td>$ 350.000</td>
-                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
-                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
-                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
-                  <td>4</td>
-                  <td><span class="badge badge-success">Disponible</span></td>
+                  <td>$1000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
+                        class="icon ion-md-eye"></i></a>
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
                       data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
                 <tr>
-                  <td>RP005</td>
-                  <td>Espejos</td>
-                  <td>....</td>
+                  <td>RF001</td>
+                  <td>Josefino Galeano</td>
+                  <td>Luis Patricio</td>
+                  <td>3:45 PM</td>
+                  <td>12/09/2020</td>
                   <td>..</td>
-                  <td>$ 230.000</td>
-                  <td>$ 350.000</td>
-                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
-                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
-                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
-                  <td>4</td>
-                  <td><span class="badge badge-warning">Stock bajo</span></td>
+                  <td>$1000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
+                        class="icon ion-md-eye"></i></a>
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
                       data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
                 <tr>
-                  <td>RP06</td>
-                  <td>Neumáticos</td>
-                  <td>....</td>
+                  <td>RF001</td>
+                  <td>Juan Perez</td>
+                  <td>Diana Lizeth</td>
+                  <td>8:30 AM</td>
+                  <td>14/11/2019</td>
                   <td>..</td>
-                  <td>$ 230.000</td>
-                  <td>$ 350.000</td>
-                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
-                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
-                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
-                  <td>4</td>
-                  <td><span class="badge badge-danger">No disponible</span></td>
+                  <td>$1000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
+                        class="icon ion-md-eye"></i></a>
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
                       data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
                 <tr>
-                  <td>RP007</td>
-                  <td>Retenedores</td>
-                  <td>....</td>
+                  <td>RF002</td>
+                  <td>Luis Ernesto</td>
+                  <td>Maria Bermudez</td>
+                  <td>2:20 PM</td>
+                  <td>20/01/2020</td>
                   <td>..</td>
-                  <td>$ 230.000</td>
-                  <td>$ 350.000</td>
-                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
-                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
-                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
-                  <td>4</td>
-                  <td><span class="badge badge-success">Disponible</span></td>
+                  <td>$1000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
+                        class="icon ion-md-eye"></i></a>
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
                       data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
                 <tr>
-                  <td>RP008</td>
-                  <td>Bomba</td>
-                  <td>....</td>
+                  <td>RF003</td>
+                  <td>Pedro Samper</td>
+                  <td>Jessica Ulrich</td>
+                  <td>4:10 PM</td>
+                  <td>15/03/2020</td>
                   <td>..</td>
-                  <td>$ 230.000</td>
-                  <td>$ 350.000</td>
-                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
-                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
-                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
-                  <td>4</td>
-                  <td><span class="badge badge-warning">Stock bajo</span></td>
+                  <td>$1000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
+                        class="icon ion-md-eye"></i></a>
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
                       data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
                   </td>
                 </tr>
                 <tr>
-                  <td>RP009</td>
-                  <td>Parachoques</td>
-                  <td>....</td>
+                  <td>RF001</td>
+                  <td>Daniel Ochoa</td>
+                  <td>Juan Espinosa</td>
+                  <td>10:30 AM</td>
+                  <td>30/10/2020</td>
                   <td>..</td>
-                  <td>$ 230.000</td>
-                  <td>$ 350.000</td>
-                  <td><a href="#modal-table" class="mx-2 h5 icongreen" title="Entradas" data-toggle="modal"><i
-                        class="icon ion-md-log-in"></i></a> / <a href="#modal-table" class="mx-2 h5 iconred"
-                      title="Salidas" data-toggle="modal"><i class="icon ion-md-log-out"></i></a></td>
-                  <td>4</td>
-                  <td><span class="badge badge-danger">No disponible</span></td>
+                  <td>$1000</td>
                   <td>
-                    <a href="#" class="mx-2 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
+                        class="icon ion-md-eye"></i></a>
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
+                        class="icon ion-md-create"></i></a>
+                    <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
+                      data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>RF001</td>
+                  <td>Josefino Galeano</td>
+                  <td>Luis Patricio</td>
+                  <td>3:45 PM</td>
+                  <td>12/09/2020</td>
+                  <td>..</td>
+                  <td>$1000</td>
+                  <td>
+                    <a href="#modal-table" data-toggle="modal" class="mx-1 h5 iconblue" title="Servicios"><i
+                        class="icon ion-md-eye"></i></a>
+                    <a href="#" class="mx-1 h5 iconyellow" title="Editar" data-toggle="tooltip"><i
                         class="icon ion-md-create"></i></a>
                     <a href="#" class="mx-2 h5 iconred" title="Eliminar" onclick="eliminar(this)"
                       data-toggle="tooltip"><i class="icon ion-md-trash"></i></a>
