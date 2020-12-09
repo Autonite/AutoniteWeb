@@ -532,6 +532,11 @@ function valLogin() {
   return valTodo(validaciones);
 }
 
+function valContactanos() {
+  validaciones = [Descripcion(), Telefono(), Correo(), Apellido(), Nombre()];
+  return valTodo(validaciones);
+}
+
 function valRecuperar() {
   validaciones = [Correo()];
   return valTodo(validaciones);
